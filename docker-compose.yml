@@ -1,0 +1,26 @@
+version: '3.7'
+services:
+  mongo:
+    image: mongo:latest
+    container_name: mongodb
+    hostname: mongo
+    volumes:
+      - mongodb:/data/db2
+    restart:
+      always
+    networks:
+      - node-docker-networks
+  node-docker:
+    image : renakaagusta/fifa-node-docker:0.0.1
+    ports:
+      - 3000:3000
+    depends_on:
+      - mongo
+    environment:
+      WAIT_HOSTS: mongo:27017
+    networks:
+      - node-docker-networks 
+networks:
+  node-docker-networks:
+volumes:
+  mongodb:

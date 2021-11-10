@@ -1,0 +1,1572 @@
+{
+	"info": {
+		"_postman_id": "01972eb1-bab4-44f7-bbfe-e4daeb0b3454",
+		"name": "fifa",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET ALL USERS",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"type": "text",
+						"value": "3d92dc81226fae546b951fb5cd4d1963feaed73652086dd08046c69aa5d60f15d488c1d32ce1e1f8edce5bca5a863d2e2493854415ccb7fb9aea4004badeb789d37572e1f9dfa9e3f50f886429c0d948a91e3c4b01cf0522f267eb964d1a160f2ce3df9bf2a268c6fab50b485491dd7fe856d0f78d068c11da5963cbd96575f19c894fc330b1ab68a0625e79359523f2b9923866511e4f51f3ea15b2d3839f8db6297785af6164f398a5704699f0daac6893827875b3fb4036d13a544f875831443fb1e1e3555a425dc18bdfc43381809dd7ab7f8551af92bdf835812e0f05fb836f22675dc7aa77026868a973836bfea190e487a716bd380cd3ddb80e91034a2136a870a5bf31bb8d4b62"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{URL}}:3000/api/v1/auth/all",
+					"host": [
+						"{{URL}}"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"all"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET ALL USERS",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "3d92dc81226fae546b951fb5cd4d1963feaed73652086dd08046c69aa5d60f15d488c1d32ce1e1f8edce5bca5a863d2e2493854415ccb7fb9aea4004badeb789d37572e1f9dfa9e3f50f886429c0d948a91e3c4b01cf0522f267eb964d1a160f2ce3df9bf2a268c6fab50b485491dd7fe856d0f78d068c11da5963cbd96575f19c894fc330b1ab68a0625e79359523f2b9923866511e4f51f3ea15b2d3839f8db6297785af6164f398a5704699f0daac6893827875b3fb4036d13a544f875831443fb1e1e3555a425dc18bdfc43381809dd7ab7f8551af92bdf835812e0f05fb836f22675dc7aa77026868a973836bfea190e487a716bd380cd3ddb80e91034a2136a870a5bf31bb8d4b62"
+							},
+							{
+								"key": "auth-token",
+								"value": "qwertyuiop",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{URL}}:3000/api/v1/auth",
+							"host": [
+								"{{URL}}"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"auth"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "x-access-token, auth-token, Origin, Content-Type, Accept"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "545"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"221-n+axuketwvGd4dBAgcC8DIgHy70\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 13 Apr 2021 04:15:58 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"message\": \"User Added Successfully\",\n    \"data\": [\n        {\n            \"_id\": \"60571935c997d43830a03d65\",\n            \"verification\": 1,\n            \"roles\": [\n                \"6056cd754f892430703ef28e\",\n                \"6056cd754f892430703ef28c\"\n            ],\n            \"username\": \"admin\",\n            \"email\": \"renakaagusta@gmail.com\",\n            \"password\": \"$2a$08$rfDI9ttneWIPCtLEGFFKGu71oY78xrU4MGPHh0urhufAroGbsSzNW\"\n        },\n        {\n            \"_id\": \"6073fe016037b85754bc94d1\",\n            \"verification\": 0,\n            \"roles\": [\n                \"6056cd754f892430703ef28d\",\n                \"6056cd754f892430703ef28c\"\n            ],\n            \"username\": \"halo3\",\n            \"email\": \"renakaagusta28@gmail.com\",\n            \"password\": \"$2a$08$VMe9aeyhMEsaU8mVEEUKW.ZbqXLUeaoNUUEW4NWnJUGG3tkHO29Se\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "SIGN UP",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"admin\",\n    \"email\": \"autowin.its@gmail.com\",\n    \"password\": \"admin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}:3000/api/v1/auth/signup",
+					"host": [
+						"{{URL}}"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "SIGN UP Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"renaka\",\n    \"email\": \"renakaagusta@gmail.com\",\n    \"password\": \"renaka\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}:3000/api/v1/auth/signup",
+							"host": [
+								"{{URL}}"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "x-access-token, Origin, Content-Type, Accept"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "72"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"48-ZXsFfJlXaU2aFrVPChmcetckyNs\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 12 Apr 2021 05:38:13 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"message\": \"User was registered successfully!\",\n    \"data\": null\n}"
+				},
+				{
+					"name": "SIGN UP Success as admin",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"admin\",\n    \"email\": \"autowin.its@gmail.com\",\n    \"password\": \"admin\",\n    \"roles\": [\"user\", \"admin\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}:3000/api/v1/auth/signup",
+							"host": [
+								"{{URL}}"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "x-access-token, Origin, Content-Type, Accept"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "72"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"48-ZXsFfJlXaU2aFrVPChmcetckyNs\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 12 Apr 2021 09:11:46 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"message\": \"User was registered successfully!\",\n    \"data\": null\n}"
+				},
+				{
+					"name": "SIGN UP Email has been used",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"renaka\",\n    \"email\": \"renakaagusta28@gmail.com\",\n    \"password\": \"renaka\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}:3000/api/v1/auth/signup",
+							"host": [
+								"{{URL}}"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "x-access-token, Origin, Content-Type, Accept"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "63"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3f-EpxPWs+7a5n+tQdPOFSV1+g6T9o\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 12 Apr 2021 05:37:23 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 400,\n    \"message\": \"This email has been used\",\n    \"data\": null\n}"
+				},
+				{
+					"name": "SIGN UP Username has been used",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"renaka\",\n    \"email\": \"ikmp.srby@gmail.com\",\n    \"password\": \"renaka\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}:3000/api/v1/auth/signup",
+							"host": [
+								"{{URL}}"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "x-access-token, Origin, Content-Type, Accept"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "66"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"42-oqI1C2TVMOqWPHGUaUi6EDXeMGk\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 12 Apr 2021 05:59:28 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 400,\n    \"message\": \"This username has been used\",\n    \"data\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "SIGN IN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{URL}}:3000/api/v1/auth/signin",
+					"host": [
+						"{{URL}}"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"signin"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "SIGN IN Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "a",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}:3000/api/v1/auth/signin",
+							"host": [
+								"{{URL}}"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"signin"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "x-access-token, Origin, Content-Type, Accept"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "731"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2db-nM0xUIluHnOOduEuZir8tlSi9Ag\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 12 Apr 2021 05:38:36 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"message\": \"Success Login!\",\n    \"data\": {\n        \"id\": \"6073dc7f2695b6100bf17bd8\",\n        \"username\": \"a\",\n        \"verification\": 0,\n        \"email\": \"renakaagusta28@gmail.com\",\n        \"roles\": [\n            \"user\",\n            \"participant\"\n        ],\n        \"accessToken\": \"95fc881c0eeb286d639897f34c1bff506e676bb8350a1ec7fb80c777a393290ecb76bda94f1fc96e5fa889d2c3aba5909f09428ba2c44d7a6cfd063abcd70661e74ceef9b62ca6431e69e35b8ae27aea0b3389308ebfe8c26c00f31b37501f8e090e5105ed83dbaba988cf85c24df3207af4b5b78c54f2270dc149e6a6ba761893df0e2d28b76a469260d5777a3129b9cefe76f7d0385402ef8ca1072dc40ba40ce15c7f42e9562861fe69cfcc5b27a00ba821fcca6d20f48047c9432a5082518a5023c0fac08d56bee122896f753df9ceb37c2dfa69cc0e00c0a34c4e6efe02026e426852f57a33f8876e8a2a5dc607b6ad402d900c31e369e8cdacc252048a5fef87762998b03ebbcb58\"\n    }\n}"
+				},
+				{
+					"name": "SIGN IN Success as admin",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}:3000/api/v1/auth/signin",
+							"host": [
+								"{{URL}}"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"signin"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "x-access-token, Origin, Content-Type, Accept"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "727"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2d7-Kzb1TbNnYj3U3V4umwr2W0RqJGQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 12 Apr 2021 09:27:32 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"message\": \"Success Login!\",\n    \"data\": {\n        \"id\": \"60571935c997d43830a03d65\",\n        \"username\": \"admin\",\n        \"verification\": 0,\n        \"email\": \"renakaagusta@gmail.com\",\n        \"roles\": [\n            \"admin\",\n            \"user\"\n        ],\n        \"accessToken\": \"40c7e36c5f39553cdcc241c4fdb2342ac549d1fb5d88ed5de021b05ef8a6f284d0bd5631d2e8532997a33a9315c14dc6f7646c28ec832071d9776ed25f3ce5d5a36ad8b99bb2ccb0a6678373365acf3ae5ee8775477e628fd80630e917614665e6aa095f9ed9ce79ff6a3e4db08658c329d6fb4a064f249c00b072a41b5c2bf65cf06e69c81ed77e40142c4521291396e80df999dbb0ca8311b1b3456720605195bc8b07304a5c731f199de6c60247474b9ddf24d1093e268c67e95b60a47ee9c82bf4992eefa5aead619963a1229e2bef2f9f418257409aea2a44c65e0b58da9f224133cab879fc493df55fad083f8cd699995e384c21ac1cac967423423742862d952239503ad39670ca\"\n    }\n}"
+				},
+				{
+					"name": "SIGN IN User was not found",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "halo",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}:3000/api/v1/auth/signin",
+							"host": [
+								"{{URL}}"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"signin"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "x-access-token, Origin, Content-Type, Accept"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "58"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3a-Qi4U8TnKzO5NnQUoX5jGyFp/DHI\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 12 Apr 2021 05:35:49 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 404,\n    \"message\": \"User was not found!\",\n    \"data\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "CONFIRM EMAIL",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "anava",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "renaka28",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{URL}}:3000/api/v1/auth/confirm-email/5f9e80b7567e223d4c29c3ae",
+					"host": [
+						"{{URL}}"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"confirm-email",
+						"5f9e80b7567e223d4c29c3ae"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MAKE USER AS ADMIN",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-access-token",
+						"type": "text",
+						"value": "3d92dc81226fae546b951fb5cd4d1963feaed73652086dd08046c69aa5d60f15d488c1d32ce1e1f8edce5bca5a863d2e2493854415ccb7fb9aea4004badeb789d37572e1f9dfa9e3f50f886429c0d948a91e3c4b01cf0522f267eb964d1a160f2ce3df9bf2a268c6fab50b485491dd7fe856d0f78d068c11da5963cbd96575f19c894fc330b1ab68a0625e79359523f2b9923866511e4f51f3ea15b2d3839f8db6297785af6164f398a5704699f0daac6893827875b3fb4036d13a544f875831443fb1e1e3555a425dc18bdfc43381809dd7ab7f8551af92bdf835812e0f05fb836f22675dc7aa77026868a973836bfea190e487a716bd380cd3ddb80e91034a2136a870a5bf31bb8d4b62"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{URL}}:3000/api/v1/auth/6073fe016037b85754bc94d1/grant-admin",
+					"host": [
+						"{{URL}}"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"6073fe016037b85754bc94d1",
+						"grant-admin"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET ALL USERS",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "3d92dc81226fae546b951fb5cd4d1963feaed73652086dd08046c69aa5d60f15d488c1d32ce1e1f8edce5bca5a863d2e2493854415ccb7fb9aea4004badeb789d37572e1f9dfa9e3f50f886429c0d948a91e3c4b01cf0522f267eb964d1a160f2ce3df9bf2a268c6fab50b485491dd7fe856d0f78d068c11da5963cbd96575f19c894fc330b1ab68a0625e79359523f2b9923866511e4f51f3ea15b2d3839f8db6297785af6164f398a5704699f0daac6893827875b3fb4036d13a544f875831443fb1e1e3555a425dc18bdfc43381809dd7ab7f8551af92bdf835812e0f05fb836f22675dc7aa77026868a973836bfea190e487a716bd380cd3ddb80e91034a2136a870a5bf31bb8d4b62"
+							},
+							{
+								"key": "auth-token",
+								"value": "qwertyuiop",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{URL}}:3000/api/v1/auth",
+							"host": [
+								"{{URL}}"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"auth"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "x-access-token, auth-token, Origin, Content-Type, Accept"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "545"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"221-n+axuketwvGd4dBAgcC8DIgHy70\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 13 Apr 2021 04:15:58 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"message\": \"User Added Successfully\",\n    \"data\": [\n        {\n            \"_id\": \"60571935c997d43830a03d65\",\n            \"verification\": 1,\n            \"roles\": [\n                \"6056cd754f892430703ef28e\",\n                \"6056cd754f892430703ef28c\"\n            ],\n            \"username\": \"admin\",\n            \"email\": \"renakaagusta@gmail.com\",\n            \"password\": \"$2a$08$rfDI9ttneWIPCtLEGFFKGu71oY78xrU4MGPHh0urhufAroGbsSzNW\"\n        },\n        {\n            \"_id\": \"6073fe016037b85754bc94d1\",\n            \"verification\": 0,\n            \"roles\": [\n                \"6056cd754f892430703ef28d\",\n                \"6056cd754f892430703ef28c\"\n            ],\n            \"username\": \"halo3\",\n            \"email\": \"renakaagusta28@gmail.com\",\n            \"password\": \"$2a$08$VMe9aeyhMEsaU8mVEEUKW.ZbqXLUeaoNUUEW4NWnJUGG3tkHO29Se\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "GET ALL PLAYERS",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"type": "text",
+						"value": "3d92dc81226fae546b951fb5cd4d1963feaed73652086dd08046c69aa5d60f15d488c1d32ce1e1f8edce5bca5a863d2e2493854415ccb7fb9aea4004badeb789d37572e1f9dfa9e3f50f886429c0d948a91e3c4b01cf0522f267eb964d1a160f2ce3df9bf2a268c6fab50b485491dd7fe856d0f78d068c11da5963cbd96575f19c894fc330b1ab68a0625e79359523f2b9923866511e4f51f3ea15b2d3839f8db6297785af6164f398a5704699f0daac6893827875b3fb4036d13a544f875831443fb1e1e3555a425dc18bdfc43381809dd7ab7f8551af92bdf835812e0f05fb836f22675dc7aa77026868a973836bfea190e487a716bd380cd3ddb80e91034a2136a870a5bf31bb8d4b62"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{URL}}:3000/api/v1/player/all",
+					"host": [
+						"{{URL}}"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"player",
+						"all"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET ALL PLAYERS Success",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "fc45b3a3414d14a9a8206c51974e0f5eaec81190e0c0651a845636c3e08a4ae2dcc913829fe30f579fdc8ddd1f5a61cd93964ffae7d783a872d3aa5fe73061a1dee63956ba29a3624ee001a1b65fbe9740eaf95c034f650c3775a74d0e7d0b846bb36f0ecd05620663bb00c51129c3531636fd4855882f75dff372e0c1127ea2ef15fad4640e48fc522e2450b806d9a49c17a5203968335e899f89300cec09adad0f5fd0c96ff418967bd9cdab96a0ab05926e35d8a2936c98bd0d71a447626d4c09e316dc7c0f01639754d7e62663274458bc61e70cd9b48738da9642e3e1de88328653e91b4f480e70aee6488bbe6bb72a56dc05c8e0bccde9330d697ecda9221ba55b7dc8128d204015"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{URL}}:3000/api/v1/player/all",
+							"host": [
+								"{{URL}}"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"player",
+								"all"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "x-access-token, Origin, Content-Type, Accept"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "34389"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"8655-4lk9YH4k4xjaU4O8euc0FdFb6NQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 12 Apr 2021 08:54:01 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"message\": \"Player Added Successfully\",\n    \"data\": [\n        {\n            \"_id\": \"6052cc4189999e12d56a4771\",\n            \"ID\": \"27\",\n            \"Name\": \"J. Cole\",\n            \"Nationality\": \"England\",\n            \"Club\": \"Coventry City\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4777\",\n            \"ID\": \"244\",\n            \"Name\": \"G. Neville  B\",\n            \"Nationality\": \"England\",\n            \"Club\": \"Manchester United\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4778\",\n            \"ID\": \"246\",\n            \"Name\": \"P. Scholes\",\n            \"Nationality\": \"England\",\n            \"Club\": \"Manchester United\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4779\",\n            \"ID\": \"249\",\n            \"Name\": \"P. Neville\",\n            \"Nationality\": \"England\",\n            \"Club\": \"Everton\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a477a\",\n            \"ID\": \"250\",\n            \"Name\": \"D. Beckham\",\n            \"Nationality\": \"England\",\n            \"Club\": null\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a477b\",\n            \"ID\": \"330\",\n            \"Name\": \"R. Keane\",\n            \"Nationality\": \"Republic of Ireland\",\n            \"Club\": \"LA Galaxy\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a477c\",\n            \"ID\": \"388\",\n            \"Name\": \"S. Campbell\",\n            \"Nationality\": \"England\",\n            \"Club\": \"Newcastle United\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a477d\",\n            \"ID\": \"488\",\n            \"Name\": \"O. Kahn\",\n            \"Nationality\": \"Germany\",\n            \"Club\": \"FC Bayern München\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a477e\",\n            \"ID\": \"496\",\n            \"Name\": \"D. Hamann\",\n            \"Nationality\": \"Germany\",\n            \"Club\": \"Milton Keynes Dons\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a477f\",\n            \"ID\": \"570\",\n            \"Name\": \"A. Okocha\",\n            \"Nationality\": \"Nigeria\",\n            \"Club\": \"Hull City\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4780\",\n            \"ID\": \"670\",\n            \"Name\": \"Zulu\",\n            \"Nationality\": \"Brazil\",\n            \"Club\": \"Pohang Steelers\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4781\",\n            \"ID\": \"684\",\n            \"Name\": \"M. Schwarzer\",\n            \"Nationality\": \"Australia\",\n            \"Club\": \"Leicester City\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4782\",\n            \"ID\": \"805\",\n            \"Name\": \"J. Lehmann\",\n            \"Nationality\": \"Germany\",\n            \"Club\": \"VfB Stuttgart\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4783\",\n            \"ID\": \"1001\",\n            \"Name\": \"G. Király\",\n            \"Nationality\": \"Hungary\",\n            \"Club\": \"Hungary\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4784\",\n            \"ID\": \"1040\",\n            \"Name\": \"Roberto Carlos\",\n            \"Nationality\": \"Brazil\",\n            \"Club\": \"FC Anzhi Makhachkala\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4785\",\n            \"ID\": \"1041\",\n            \"Name\": \"J. Zanetti\",\n            \"Nationality\": \"Argentina\",\n            \"Club\": \"Inter\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4786\",\n            \"ID\": \"1075\",\n            \"Name\": \"A. Del Piero\",\n            \"Nationality\": \"Italy\",\n            \"Club\": \"Sydney FC\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4787\",\n            \"ID\": \"1088\",\n            \"Name\": \"A. Nesta\",\n            \"Nationality\": \"Italy\",\n            \"Club\": \"Montreal Impact\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4788\",\n            \"ID\": \"1109\",\n            \"Name\": \"P. Maldini\",\n            \"Nationality\": \"Italy\",\n            \"Club\": \"Milan\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4789\",\n            \"ID\": \"1179\",\n            \"Name\": \"G. Buffon\",\n            \"Nationality\": \"Italy\",\n            \"Club\": \"Juventus\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a478a\",\n            \"ID\": \"1183\",\n            \"Name\": \"F. Cannavaro\",\n            \"Nationality\": \"Italy\",\n            \"Club\": \"Juventus\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a478b\",\n            \"ID\": \"1186\",\n            \"Name\": \"Couto\",\n            \"Nationality\": \"Portugal\",\n            \"Club\": \"Parma\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a478c\",\n            \"ID\": \"1198\",\n            \"Name\": \"F. Inzaghi\",\n            \"Nationality\": \"Italy\",\n            \"Club\": \"Milan\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a478d\",\n            \"ID\": \"1219\",\n            \"Name\": \"C. Abbiati\",\n            \"Nationality\": \"Italy\",\n            \"Club\": \"Milan\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a478e\",\n            \"ID\": \"1222\",\n            \"Name\": \"Marco Paulo\",\n            \"Nationality\": \"Portugal\",\n            \"Club\": \"CF Estrela da Amadora\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a478f\",\n            \"ID\": \"1238\",\n            \"Name\": \"F. Totti\",\n            \"Nationality\": \"Italy\",\n            \"Club\": \"Roma\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4790\",\n            \"ID\": \"1256\",\n            \"Name\": \"C. Seedorf\",\n            \"Nationality\": \"Netherlands\",\n            \"Club\": \"Botafogo\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4791\",\n            \"ID\": \"1419\",\n            \"Name\": \"P. Vieira\",\n            \"Nationality\": \"France\",\n            \"Club\": \"Manchester City\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4792\",\n            \"ID\": \"1615\",\n            \"Name\": \"L. Thuram\",\n            \"Nationality\": \"France\",\n            \"Club\": \"FC Barcelona\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4793\",\n            \"ID\": \"1625\",\n            \"Name\": \"T. Henry\",\n            \"Nationality\": \"France\",\n            \"Club\": null\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4794\",\n            \"ID\": \"1668\",\n            \"Name\": \"C. Makélelé\",\n            \"Nationality\": \"France\",\n            \"Club\": \"Paris Saint-Germain\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4795\",\n            \"ID\": \"1747\",\n            \"Name\": \"G. Coupet\",\n            \"Nationality\": \"France\",\n            \"Club\": \"Paris Saint-Germain\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4796\",\n            \"ID\": \"1845\",\n            \"Name\": \"O. Solskjær\",\n            \"Nationality\": \"Norway\",\n            \"Club\": \"Manchester United\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4797\",\n            \"ID\": \"2062\",\n            \"Name\": \"L. Bowyer\",\n            \"Nationality\": \"England\",\n            \"Club\": \"Ipswich Town\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4798\",\n            \"ID\": \"2147\",\n            \"Name\": \"M. Stekelenburg\",\n            \"Nationality\": \"Netherlands\",\n            \"Club\": \"Ajax\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4799\",\n            \"ID\": \"2148\",\n            \"Name\": \"H. Trabelsi\",\n            \"Nationality\": \"Tunisia\",\n            \"Club\": \"Manchester City\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a479a\",\n            \"ID\": \"2196\",\n            \"Name\": \"R. Weidenfeller\",\n            \"Nationality\": \"Germany\",\n            \"Club\": \"Borussia Dortmund\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a479b\",\n            \"ID\": \"2231\",\n            \"Name\": \"E. Heskey\",\n            \"Nationality\": \"England\",\n            \"Club\": \"Bolton Wanderers\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a479c\",\n            \"ID\": \"2492\",\n            \"Name\": \"Eliseu\",\n            \"Nationality\": \"Portugal\",\n            \"Club\": \"SL Benfica\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a479d\",\n            \"ID\": \"2651\",\n            \"Name\": \"S. Given\",\n            \"Nationality\": \"Republic of Ireland\",\n            \"Club\": \"Stoke City\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a479e\",\n            \"ID\": \"2702\",\n            \"Name\": \"K. Ellison\",\n            \"Nationality\": \"England\",\n            \"Club\": \"Newport County\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a479f\",\n            \"ID\": \"2837\",\n            \"Name\": \"R. Delap\",\n            \"Nationality\": \"Republic of Ireland\",\n            \"Club\": \"Burton Albion\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47a0\",\n            \"ID\": \"2956\",\n            \"Name\": \"S. Petrov\",\n            \"Nationality\": \"Bulgaria\",\n            \"Club\": \"Aston Villa\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47a1\",\n            \"ID\": \"3281\",\n            \"Name\": \"Tarantini\",\n            \"Nationality\": \"Portugal\",\n            \"Club\": \"Rio Ave FC\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47a2\",\n            \"ID\": \"3395\",\n            \"Name\": \"S. Wright-Phillips\",\n            \"Nationality\": \"England\",\n            \"Club\": \"New York Red Bulls\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47a3\",\n            \"ID\": \"3467\",\n            \"Name\": \"Yuri\",\n            \"Nationality\": \"Brazil\",\n            \"Club\": \"SD Ponferradina\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47a4\",\n            \"ID\": \"3484\",\n            \"Name\": \"J. O'Shea\",\n            \"Nationality\": \"Republic of Ireland\",\n            \"Club\": \"Reading\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47a5\",\n            \"ID\": \"3622\",\n            \"Name\": \"Ricardo Carvalho\",\n            \"Nationality\": \"Portugal\",\n            \"Club\": \"Portugal\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47a6\",\n            \"ID\": \"3647\",\n            \"Name\": \"M. Ballack\",\n            \"Nationality\": \"Germany\",\n            \"Club\": \"Bayer 04 Leverkusen\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47a7\",\n            \"ID\": \"3712\",\n            \"Name\": \"Dida\",\n            \"Nationality\": \"Brazil\",\n            \"Club\": \"Internacional\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47a8\",\n            \"ID\": \"3922\",\n            \"Name\": \"B. Schneider\",\n            \"Nationality\": \"Germany\",\n            \"Club\": \"Bayer 04 Leverkusen\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47a9\",\n            \"ID\": \"4077\",\n            \"Name\": \"Simão\",\n            \"Nationality\": \"Portugal\",\n            \"Club\": \"RCD Espanyol\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47aa\",\n            \"ID\": \"4114\",\n            \"Name\": \"A. Radomski\",\n            \"Nationality\": \"Poland\",\n            \"Club\": \"Cracovia\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47ab\",\n            \"ID\": \"4202\",\n            \"Name\": \"G. Gattuso\",\n            \"Nationality\": \"Italy\",\n            \"Club\": \"FC Sion\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47ac\",\n            \"ID\": \"4233\",\n            \"Name\": \"C. Reyna\",\n            \"Nationality\": \"United States\",\n            \"Club\": \"New York Red Bulls\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47ad\",\n            \"ID\": \"5003\",\n            \"Name\": \"Cafu\",\n            \"Nationality\": \"Brazil\",\n            \"Club\": \"Milan\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47ae\",\n            \"ID\": \"5203\",\n            \"Name\": \"M. Oddo B\",\n            \"Nationality\": \"Italy\",\n            \"Club\": \"Lecce\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47af\",\n            \"ID\": \"5231\",\n            \"Name\": \"B. Mendy\",\n            \"Nationality\": \"France\",\n            \"Club\": \"Stade Brestois 29\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47b0\",\n            \"ID\": \"5419\",\n            \"Name\": \"M. Owen\",\n            \"Nationality\": \"England\",\n            \"Club\": \"Stoke City\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47b1\",\n            \"ID\": \"5459\",\n            \"Name\": \"M. Bagayoko\",\n            \"Nationality\": \"Mali\",\n            \"Club\": \"Doncaster Rovers\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47b2\",\n            \"ID\": \"5467\",\n            \"Name\": \"J. Carragher\",\n            \"Nationality\": \"England\",\n            \"Club\": \"Liverpool\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47b3\",\n            \"ID\": \"5471\",\n            \"Name\": \"F. Lampard\",\n            \"Nationality\": \"England\",\n            \"Club\": \"New York City FC\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47b4\",\n            \"ID\": \"5479\",\n            \"Name\": \"Casillas\",\n            \"Nationality\": \"Spain\",\n            \"Club\": \"FC Porto\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47b5\",\n            \"ID\": \"5589\",\n            \"Name\": \"Figo\",\n            \"Nationality\": \"Portugal\",\n            \"Club\": \"Inter\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47b6\",\n            \"ID\": \"5672\",\n            \"Name\": \"E. Davids\",\n            \"Nationality\": \"Netherlands\",\n            \"Club\": \"Barnet\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47b7\",\n            \"ID\": \"5673\",\n            \"Name\": \"J. Litmanen\",\n            \"Nationality\": \"Finland\",\n            \"Club\": \"Finland\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47b8\",\n            \"ID\": \"5680\",\n            \"Name\": \"P. Kluivert\",\n            \"Nationality\": \"Netherlands\",\n            \"Club\": \"LOSC Lille\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47b9\",\n            \"ID\": \"5740\",\n            \"Name\": \"J. Stam\",\n            \"Nationality\": \"Netherlands\",\n            \"Club\": \"Ajax\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47ba\",\n            \"ID\": \"5744\",\n            \"Name\": \"E. Gudjohnsen\",\n            \"Nationality\": \"Iceland\",\n            \"Club\": \"Molde FK\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47bb\",\n            \"ID\": \"5809\",\n            \"Name\": \"N. Anelka\",\n            \"Nationality\": \"France\",\n            \"Club\": \"West Bromwich Albion\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47bc\",\n            \"ID\": \"5879\",\n            \"Name\": \"A. Gilardino\",\n            \"Nationality\": \"Italy\",\n            \"Club\": \"Spezia\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47bd\",\n            \"ID\": \"5984\",\n            \"Name\": \"D. Trezeguet\",\n            \"Nationality\": \"France\",\n            \"Club\": \"Newell's Old Boys\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47be\",\n            \"ID\": \"6083\",\n            \"Name\": \"M. Jankulovski\",\n            \"Nationality\": \"Czech Republic\",\n            \"Club\": \"Milan\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47bf\",\n            \"ID\": \"6235\",\n            \"Name\": \"P. Nedved\",\n            \"Nationality\": \"Czech Republic\",\n            \"Club\": \"Juventus\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47c0\",\n            \"ID\": \"6826\",\n            \"Name\": \"G. Barry\",\n            \"Nationality\": \"England\",\n            \"Club\": \"West Bromwich Albion\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47c1\",\n            \"ID\": \"6908\",\n            \"Name\": \"D. Stanković\",\n            \"Nationality\": \"Serbia\",\n            \"Club\": \"Inter\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47c2\",\n            \"ID\": \"6975\",\n            \"Name\": \"F. Ljungberg\",\n            \"Nationality\": \"Sweden\",\n            \"Club\": \"Celtic\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47c3\",\n            \"ID\": \"7142\",\n            \"Name\": \"K. Kaladze\",\n            \"Nationality\": \"Georgia\",\n            \"Club\": \"Genoa\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47c4\",\n            \"ID\": \"7289\",\n            \"Name\": \"R. Ferdinand\",\n            \"Nationality\": \"England\",\n            \"Club\": \"Queens Park Rangers\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47c5\",\n            \"ID\": \"7512\",\n            \"Name\": \"H. Crespo\",\n            \"Nationality\": \"Argentina\",\n            \"Club\": \"Parma\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b57\",\n            \"ID\": \"167180\",\n            \"Name\": \"F. Nordkvelle\",\n            \"Nationality\": \"Norway\",\n            \"Club\": \"Odds BK\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b58\",\n            \"ID\": \"167305\",\n            \"Name\": \"J. Vargas\",\n            \"Nationality\": \"Peru\",\n            \"Club\": \"Real Betis\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b59\",\n            \"ID\": \"167308\",\n            \"Name\": \"M. Kadlec\",\n            \"Nationality\": \"Czech Republic\",\n            \"Club\": \"Sparta Praha\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b5a\",\n            \"ID\": \"167397\",\n            \"Name\": \"Falcao\",\n            \"Nationality\": \"Colombia\",\n            \"Club\": \"Galatasaray SK\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b5b\",\n            \"ID\": \"167413\",\n            \"Name\": \"J. Polák\",\n            \"Nationality\": \"Czech Republic\",\n            \"Club\": \"1. FC Nürnberg\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b5c\",\n            \"ID\": \"167423\",\n            \"Name\": \"C. Llama\",\n            \"Nationality\": \"Argentina\",\n            \"Club\": \"Club Atlético Aldosivi\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b5d\",\n            \"ID\": \"167431\",\n            \"Name\": \"G. Castro\",\n            \"Nationality\": \"Germany\",\n            \"Club\": \"VfB Stuttgart\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b5e\",\n            \"ID\": \"167435\",\n            \"Name\": \"O. Ustari\",\n            \"Nationality\": \"Argentina\",\n            \"Club\": \"Pachuca\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b5f\",\n            \"ID\": \"167437\",\n            \"Name\": \"D. Stroh-Engel\",\n            \"Nationality\": \"Germany\",\n            \"Club\": \"SpVgg Unterhaching\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b60\",\n            \"ID\": \"167452\",\n            \"Name\": \"O. Fink\",\n            \"Nationality\": \"Germany\",\n            \"Club\": \"Fortuna Düsseldorf\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b61\",\n            \"ID\": \"167495\",\n            \"Name\": \"M. Neuer\",\n            \"Nationality\": \"Germany\",\n            \"Club\": \"FC Bayern München\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b62\",\n            \"ID\": \"167512\",\n            \"Name\": \"S. Whalley\",\n            \"Nationality\": \"England\",\n            \"Club\": \"Shrewsbury\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b63\",\n            \"ID\": \"167514\",\n            \"Name\": \"D. Basta\",\n            \"Nationality\": \"Serbia\",\n            \"Club\": \"Lazio\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b64\",\n            \"ID\": \"167515\",\n            \"Name\": \"N. Žigić\",\n            \"Nationality\": \"Serbia\",\n            \"Club\": \"Birmingham City\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b65\",\n            \"ID\": \"167519\",\n            \"Name\": \"E. Juárez\",\n            \"Nationality\": \"Mexico\",\n            \"Club\": \"Vålerenga Fotball\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b66\",\n            \"ID\": \"167524\",\n            \"Name\": \"J. Torres Nilo\",\n            \"Nationality\": \"Mexico\",\n            \"Club\": \"Tigres U.A.N.L.\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b67\",\n            \"ID\": \"167532\",\n            \"Name\": \"A. Aldrete\",\n            \"Nationality\": \"Mexico\",\n            \"Club\": \"Cruz Azul\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b68\",\n            \"ID\": \"167549\",\n            \"Name\": \"R. Shishkin\",\n            \"Nationality\": \"Russia\",\n            \"Club\": \"FC Krasnodar\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b69\",\n            \"ID\": \"167575\",\n            \"Name\": \"A. Shunin\",\n            \"Nationality\": \"Russia\",\n            \"Club\": \"Russia\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b6a\",\n            \"ID\": \"167599\",\n            \"Name\": \"R. Elm\",\n            \"Nationality\": \"Sweden\",\n            \"Club\": \"Kalmar FF\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b6b\",\n            \"ID\": \"167601\",\n            \"Name\": \"K. Nababkin\",\n            \"Nationality\": \"Russia\",\n            \"Club\": \"PFC CSKA Moscow\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b6c\",\n            \"ID\": \"167628\",\n            \"Name\": \"S. Ruffier\",\n            \"Nationality\": \"France\",\n            \"Club\": \"AS Saint-Étienne\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b6d\",\n            \"ID\": \"167664\",\n            \"Name\": \"G. Higuaín\",\n            \"Nationality\": \"Argentina\",\n            \"Club\": \"Inter Miami\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b6e\",\n            \"ID\": \"167665\",\n            \"Name\": \"N. Domingo\",\n            \"Nationality\": \"Argentina\",\n            \"Club\": \"Olimpia Asunción\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b6f\",\n            \"ID\": \"167666\",\n            \"Name\": \"J. Carrizo\",\n            \"Nationality\": \"Argentina\",\n            \"Club\": \"Monterrey\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47c6\",\n            \"ID\": \"7631\",\n            \"Name\": \"A. Cassano\",\n            \"Nationality\": \"Italy\",\n            \"Club\": \"Sampdoria\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47c7\",\n            \"ID\": \"7743\",\n            \"Name\": \"L. Donovan\",\n            \"Nationality\": \"United States\",\n            \"Club\": \"Club León\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47c8\",\n            \"ID\": \"7763\",\n            \"Name\": \"A. Pirlo\",\n            \"Nationality\": \"Italy\",\n            \"Club\": \"New York City FC\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47c9\",\n            \"ID\": \"7826\",\n            \"Name\": \"R. van Persie\",\n            \"Nationality\": \"Netherlands\",\n            \"Club\": \"Feyenoord\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47ca\",\n            \"ID\": \"8040\",\n            \"Name\": \"D. Rommedahl\",\n            \"Nationality\": \"Denmark\",\n            \"Club\": \"RKC Waalwijk\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47cb\",\n            \"ID\": \"8222\",\n            \"Name\": \"G. Heinze\",\n            \"Nationality\": \"Argentina\",\n            \"Club\": \"Newell's Old Boys\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47cc\",\n            \"ID\": \"8473\",\n            \"Name\": \"T. Rosický\",\n            \"Nationality\": \"Czech Republic\",\n            \"Club\": \"Sparta Praha\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47cd\",\n            \"ID\": \"8517\",\n            \"Name\": \"S. Parker\",\n            \"Nationality\": \"England\",\n            \"Club\": \"Fulham\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47ce\",\n            \"ID\": \"8753\",\n            \"Name\": \"O. Daf\",\n            \"Nationality\": \"Senegal\",\n            \"Club\": \"FC Sochaux-Montbéliard\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47cf\",\n            \"ID\": \"8772\",\n            \"Name\": \"M. Viduka\",\n            \"Nationality\": \"Australia\",\n            \"Club\": null\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47d0\",\n            \"ID\": \"8842\",\n            \"Name\": \"L. Scaloni\",\n            \"Nationality\": \"Argentina\",\n            \"Club\": \"Atalanta\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47d1\",\n            \"ID\": \"8963\",\n            \"Name\": \"Manuel Pablo\",\n            \"Nationality\": \"Spain\",\n            \"Club\": \"Deportivo de La Coruña\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47d2\",\n            \"ID\": \"9014\",\n            \"Name\": \"A. Robben\",\n            \"Nationality\": \"Netherlands\",\n            \"Club\": \"FC Groningen\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47d3\",\n            \"ID\": \"9432\",\n            \"Name\": \"Y. Benayoun\",\n            \"Nationality\": \"Israel\",\n            \"Club\": \"Queens Park Rangers\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47d4\",\n            \"ID\": \"9676\",\n            \"Name\": \"S. Eto'o\",\n            \"Nationality\": \"Cameroon\",\n            \"Club\": \"Atiker Konyaspor\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47d5\",\n            \"ID\": \"9805\",\n            \"Name\": \"C. Bellamy\",\n            \"Nationality\": \"Wales\",\n            \"Club\": \"Cardiff City\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47d6\",\n            \"ID\": \"10264\",\n            \"Name\": \"R. van Nistelrooy\",\n            \"Nationality\": \"Netherlands\",\n            \"Club\": \"Málaga CF\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47d7\",\n            \"ID\": \"10535\",\n            \"Name\": \"Xavi\",\n            \"Nationality\": \"Spain\",\n            \"Club\": \"FC Barcelona\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47d8\",\n            \"ID\": \"10651\",\n            \"Name\": \"M. Heinz\",\n            \"Nationality\": \"Czech Republic\",\n            \"Club\": \"KSV 1919\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47d9\",\n            \"ID\": \"10899\",\n            \"Name\": \"C. Porter\",\n            \"Nationality\": \"England\",\n            \"Club\": \"Crewe Alexandra\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47da\",\n            \"ID\": \"11044\",\n            \"Name\": \"T. Dellas\",\n            \"Nationality\": \"Greece\",\n            \"Club\": \"AEK Athens\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47db\",\n            \"ID\": \"11125\",\n            \"Name\": \"G. Asamoah\",\n            \"Nationality\": \"Germany\",\n            \"Club\": \"SpVgg Greuther Fürth\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47dc\",\n            \"ID\": \"11141\",\n            \"Name\": \"M. Klose\",\n            \"Nationality\": \"Germany\",\n            \"Club\": \"Lazio\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47dd\",\n            \"ID\": \"11381\",\n            \"Name\": \"M. Gilks\",\n            \"Nationality\": \"Scotland\",\n            \"Club\": \"Bolton Wanderers\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47de\",\n            \"ID\": \"11795\",\n            \"Name\": \"A. Stansfield\",\n            \"Nationality\": \"England\",\n            \"Club\": \"Exeter City\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b70\",\n            \"ID\": \"167669\",\n            \"Name\": \"F. Higuaín\",\n            \"Nationality\": \"Argentina\",\n            \"Club\": \"DC United\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47df\",\n            \"ID\": \"12011\",\n            \"Name\": \"C. Lupatelli\",\n            \"Nationality\": \"Italy\",\n            \"Club\": \"Fiorentina\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b71\",\n            \"ID\": \"167705\",\n            \"Name\": \"A. Stokes\",\n            \"Nationality\": \"Republic of Ireland\",\n            \"Club\": \"Hibernian\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47e0\",\n            \"ID\": \"12259\",\n            \"Name\": \"S. Keita\",\n            \"Nationality\": \"Mali\",\n            \"Club\": \"Roma\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47e1\",\n            \"ID\": \"12265\",\n            \"Name\": \"O. Hargreaves   B\",\n            \"Nationality\": \"England\",\n            \"Club\": \"Manchester City\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47e2\",\n            \"ID\": \"12445\",\n            \"Name\": \"J. Riise\",\n            \"Nationality\": \"Norway\",\n            \"Club\": \"Aalesunds FK\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b72\",\n            \"ID\": \"167706\",\n            \"Name\": \"N. Bendtner\",\n            \"Nationality\": \"Denmark\",\n            \"Club\": \"FC København\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b73\",\n            \"ID\": \"167753\",\n            \"Name\": \"A. Büyük\",\n            \"Nationality\": \"Turkey\",\n            \"Club\": \"Yeni Malatyaspor\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b74\",\n            \"ID\": \"167803\",\n            \"Name\": \"S. Loach\",\n            \"Nationality\": \"England\",\n            \"Club\": \"Notts County\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b75\",\n            \"ID\": \"167812\",\n            \"Name\": \"S. Kaya\",\n            \"Nationality\": \"Turkey\",\n            \"Club\": \"Yeni Malatyaspor\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b76\",\n            \"ID\": \"167841\",\n            \"Name\": \"C. Maguire\",\n            \"Nationality\": \"Scotland\",\n            \"Club\": \"Sunderland\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b77\",\n            \"ID\": \"167905\",\n            \"Name\": \"A. Valencia\",\n            \"Nationality\": \"Ecuador\",\n            \"Club\": \"LDU Quito\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b78\",\n            \"ID\": \"167925\",\n            \"Name\": \"J. O'Brien\",\n            \"Nationality\": \"Republic of Ireland\",\n            \"Club\": \"Shamrock Rovers\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b79\",\n            \"ID\": \"167931\",\n            \"Name\": \"R. Elliot\",\n            \"Nationality\": \"Republic of Ireland\",\n            \"Club\": \"Newcastle United\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b7a\",\n            \"ID\": \"167933\",\n            \"Name\": \"Y. Cahuzac\",\n            \"Nationality\": \"France\",\n            \"Club\": \"Racing Club de Lens\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47e3\",\n            \"ID\": \"12695\",\n            \"Name\": \"A. Friedrich\",\n            \"Nationality\": \"Germany\",\n            \"Club\": \"Chicago Fire\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b7b\",\n            \"ID\": \"167943\",\n            \"Name\": \"Y. Cabaye\",\n            \"Nationality\": \"France\",\n            \"Club\": \"AS Saint-Étienne\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47e4\",\n            \"ID\": \"13038\",\n            \"Name\": \"Puyol\",\n            \"Nationality\": \"Spain\",\n            \"Club\": \"FC Barcelona\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b7c\",\n            \"ID\": \"167948\",\n            \"Name\": \"H. Lloris\",\n            \"Nationality\": \"France\",\n            \"Club\": \"Tottenham Hotspur\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47e5\",\n            \"ID\": \"13128\",\n            \"Name\": \"A. Shevchenko\",\n            \"Nationality\": \"Ukraine\",\n            \"Club\": \"Ukraine\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b7d\",\n            \"ID\": \"167959\",\n            \"Name\": \"Marcelo Grohe\",\n            \"Nationality\": \"Brazil\",\n            \"Club\": \"Al Ittihad\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47e6\",\n            \"ID\": \"13130\",\n            \"Name\": \"W. Brown\",\n            \"Nationality\": \"England\",\n            \"Club\": \"Blackburn Rovers\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b7e\",\n            \"ID\": \"167963\",\n            \"Name\": \"Anderson\",\n            \"Nationality\": \"Brazil\",\n            \"Club\": \"Internacional\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47e7\",\n            \"ID\": \"13732\",\n            \"Name\": \"J. Terry\",\n            \"Nationality\": \"England\",\n            \"Club\": \"Aston Villa\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b7f\",\n            \"ID\": \"168297\",\n            \"Name\": \"G. Curci\",\n            \"Nationality\": \"Italy\",\n            \"Club\": \"Hammarby IF\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47e8\",\n            \"ID\": \"13739\",\n            \"Name\": \"A. Smith\",\n            \"Nationality\": \"England\",\n            \"Club\": \"Notts County\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b80\",\n            \"ID\": \"168312\",\n            \"Name\": \"I. Abate\",\n            \"Nationality\": \"Italy\",\n            \"Club\": \"Milan\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47e9\",\n            \"ID\": \"13743\",\n            \"Name\": \"S. Gerrard\",\n            \"Nationality\": \"England\",\n            \"Club\": \"LA Galaxy\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47ea\",\n            \"ID\": \"13850\",\n            \"Name\": \"Sun Jihai\",\n            \"Nationality\": \"China PR\",\n            \"Club\": \"China PR\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47eb\",\n            \"ID\": \"13914\",\n            \"Name\": \"P. Robinson\",\n            \"Nationality\": \"England\",\n            \"Club\": \"Burnley\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47ec\",\n            \"ID\": \"13940\",\n            \"Name\": \"J. Koller\",\n            \"Nationality\": \"Czech Republic\",\n            \"Club\": null\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47ed\",\n            \"ID\": \"14916\",\n            \"Name\": \"J. Ángel\",\n            \"Nationality\": \"Colombia\",\n            \"Club\": \"Atlético Nacional\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47ee\",\n            \"ID\": \"15723\",\n            \"Name\": \"D. Kuyt\",\n            \"Nationality\": \"Netherlands\",\n            \"Club\": \"Feyenoord\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47ef\",\n            \"ID\": \"16254\",\n            \"Name\": \"T. Howard\",\n            \"Nationality\": \"United States\",\n            \"Club\": \"Colorado Rapids\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47f0\",\n            \"ID\": \"16897\",\n            \"Name\": \"D. Van Buyten\",\n            \"Nationality\": \"Belgium\",\n            \"Club\": \"FC Bayern München\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47f1\",\n            \"ID\": \"17209\",\n            \"Name\": \"T. Sanneh\",\n            \"Nationality\": \"United States\",\n            \"Club\": null\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47f2\",\n            \"ID\": \"18122\",\n            \"Name\": \"N. Penneteau\",\n            \"Nationality\": \"France\",\n            \"Club\": \"Sporting de Charleroi\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47f3\",\n            \"ID\": \"19292\",\n            \"Name\": \"J. Collins\",\n            \"Nationality\": \"Wales\",\n            \"Club\": \"Ipswich Town\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47f4\",\n            \"ID\": \"19521\",\n            \"Name\": \"J. Ibehre\",\n            \"Nationality\": \"England\",\n            \"Club\": \"Cambridge United\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47f5\",\n            \"ID\": \"19896\",\n            \"Name\": \"Valerón\",\n            \"Nationality\": \"Spain\",\n            \"Club\": \"UD Las Palmas\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47f6\",\n            \"ID\": \"20172\",\n            \"Name\": \"G. Holt\",\n            \"Nationality\": \"England\",\n            \"Club\": \"Rochdale\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47f7\",\n            \"ID\": \"20176\",\n            \"Name\": \"Hélder Postiga\",\n            \"Nationality\": \"Portugal\",\n            \"Club\": \"Rio Ave FC\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47f8\",\n            \"ID\": \"20209\",\n            \"Name\": \"Ricardo Costa\",\n            \"Nationality\": \"Portugal\",\n            \"Club\": \"Boavista FC\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47f9\",\n            \"ID\": \"20289\",\n            \"Name\": \"Y. Touré\",\n            \"Nationality\": \"Ivory Coast\",\n            \"Club\": \"Olympiacos CFP\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47fa\",\n            \"ID\": \"20556\",\n            \"Name\": \"Alan\",\n            \"Nationality\": \"Brazil\",\n            \"Club\": \"SC Braga\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47fb\",\n            \"ID\": \"20775\",\n            \"Name\": \"Quaresma\",\n            \"Nationality\": \"Portugal\",\n            \"Club\": \"Vitória Guimarães\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b81\",\n            \"ID\": \"168326\",\n            \"Name\": \"S. Bocchetti\",\n            \"Nationality\": \"Italy\",\n            \"Club\": \"Hellas Verona\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b82\",\n            \"ID\": \"168354\",\n            \"Name\": \"E. Viviano\",\n            \"Nationality\": \"Italy\",\n            \"Club\": \"Fatih Karagümrük S.K.\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47fc\",\n            \"ID\": \"20800\",\n            \"Name\": \"Danny\",\n            \"Nationality\": \"Portugal\",\n            \"Club\": \"Clube Sport Marítimo\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47fd\",\n            \"ID\": \"20801\",\n            \"Name\": \"Cristiano Ronaldo\",\n            \"Nationality\": \"Portugal\",\n            \"Club\": \"Juventus\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b83\",\n            \"ID\": \"168379\",\n            \"Name\": \"Carmona\",\n            \"Nationality\": \"Spain\",\n            \"Club\": \"Real Sporting de Gijón\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47fe\",\n            \"ID\": \"20882\",\n            \"Name\": \"A. Frei\",\n            \"Nationality\": \"Switzerland\",\n            \"Club\": \"FC Basel 1893\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b84\",\n            \"ID\": \"168434\",\n            \"Name\": \"Albérico\",\n            \"Nationality\": \"Brazil\",\n            \"Club\": \"Fortaleza\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a47ff\",\n            \"ID\": \"21146\",\n            \"Name\": \"M. Carrick\",\n            \"Nationality\": \"England\",\n            \"Club\": \"Manchester United\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b85\",\n            \"ID\": \"168435\",\n            \"Name\": \"S. Sirigu\",\n            \"Nationality\": \"Italy\",\n            \"Club\": \"Torino\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4800\",\n            \"ID\": \"21570\",\n            \"Name\": \"Rogério Ceni\",\n            \"Nationality\": \"Brazil\",\n            \"Club\": \"São Paulo\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b86\",\n            \"ID\": \"168444\",\n            \"Name\": \"Ari\",\n            \"Nationality\": \"Brazil\",\n            \"Club\": \"Lokomotiv Moscow\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4801\",\n            \"ID\": \"22391\",\n            \"Name\": \"R. Cretaro\",\n            \"Nationality\": \"Republic of Ireland\",\n            \"Club\": \"Finn Harps\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b87\",\n            \"ID\": \"168530\",\n            \"Name\": \"Jardel\",\n            \"Nationality\": \"Brazil\",\n            \"Club\": \"SL Benfica\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4802\",\n            \"ID\": \"23015\",\n            \"Name\": \"L. Toni\",\n            \"Nationality\": \"Italy\",\n            \"Club\": \"Hellas Verona\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b88\",\n            \"ID\": \"168533\",\n            \"Name\": \"Cléo\",\n            \"Nationality\": \"Brazil\",\n            \"Club\": \"Qingdao Huanghai F.C.\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4803\",\n            \"ID\": \"23174\",\n            \"Name\": \"J. Riquelme\",\n            \"Nationality\": \"Argentina\",\n            \"Club\": \"Boca Juniors\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b89\",\n            \"ID\": \"168542\",\n            \"Name\": \"David Silva\",\n            \"Nationality\": \"Spain\",\n            \"Club\": \"Real Sociedad\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4804\",\n            \"ID\": \"23312\",\n            \"Name\": \"J. De Guzmán\",\n            \"Nationality\": \"Canada\",\n            \"Club\": \"Canada\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b8a\",\n            \"ID\": \"168565\",\n            \"Name\": \"H. Rodallega\",\n            \"Nationality\": \"Colombia\",\n            \"Club\": \"Denizlispor\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4805\",\n            \"ID\": \"23330\",\n            \"Name\": \"M. Bordon\",\n            \"Nationality\": \"Brazil\",\n            \"Club\": \"FC Schalke 04\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b8b\",\n            \"ID\": \"168566\",\n            \"Name\": \"L. Martínez\",\n            \"Nationality\": \"Colombia\",\n            \"Club\": \"Sakaryaspor\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4806\",\n            \"ID\": \"23461\",\n            \"Name\": \"W. Samuel\",\n            \"Nationality\": \"Argentina\",\n            \"Club\": \"FC Basel 1893\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b8c\",\n            \"ID\": \"168580\",\n            \"Name\": \"A. Rodríguez\",\n            \"Nationality\": \"Peru\",\n            \"Club\": \"Alianza Lima\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4807\",\n            \"ID\": \"23466\",\n            \"Name\": \"R. Taylor\",\n            \"Nationality\": \"England\",\n            \"Club\": \"Fleetwood Town\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b8d\",\n            \"ID\": \"168585\",\n            \"Name\": \"R. Vlaar\",\n            \"Nationality\": \"Netherlands\",\n            \"Club\": \"AZ Alkmaar\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4808\",\n            \"ID\": \"23972\",\n            \"Name\": \"Dédé\",\n            \"Nationality\": \"Brazil\",\n            \"Club\": \"Borussia Dortmund\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b8e\",\n            \"ID\": \"168600\",\n            \"Name\": \"I. Shechter\",\n            \"Nationality\": \"Israel\",\n            \"Club\": \"FC Nantes\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4809\",\n            \"ID\": \"24248\",\n            \"Name\": \"D. Pizarro\",\n            \"Nationality\": \"Chile\",\n            \"Club\": \"Universidad de Chile\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a480a\",\n            \"ID\": \"24438\",\n            \"Name\": \"M. Yepes\",\n            \"Nationality\": \"Colombia\",\n            \"Club\": \"San Lorenzo de Almagro\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b8f\",\n            \"ID\": \"168607\",\n            \"Name\": \"Rafinha\",\n            \"Nationality\": \"Brazil\",\n            \"Club\": \"Olympiacos CFP\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a480b\",\n            \"ID\": \"24851\",\n            \"Name\": \"O. Mellberg\",\n            \"Nationality\": \"Sweden\",\n            \"Club\": \"FC København\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b90\",\n            \"ID\": \"168609\",\n            \"Name\": \"Miranda\",\n            \"Nationality\": \"Brazil\",\n            \"Club\": \"Jiangsu Suning FC\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a480c\",\n            \"ID\": \"25420\",\n            \"Name\": \"C. Pizarro\",\n            \"Nationality\": \"Peru\",\n            \"Club\": \"SV Werder Bremen\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b91\",\n            \"ID\": \"168621\",\n            \"Name\": \"Zeca\",\n            \"Nationality\": \"Greece\",\n            \"Club\": \"FC København\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b92\",\n            \"ID\": \"168630\",\n            \"Name\": \"M. Dabo\",\n            \"Nationality\": \"France\",\n            \"Club\": \"Stade Malherbe Caen\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b93\",\n            \"ID\": \"168650\",\n            \"Name\": \"Z. Kuzmanović\",\n            \"Nationality\": \"Serbia\",\n            \"Club\": \"FC Basel 1893\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b94\",\n            \"ID\": \"168651\",\n            \"Name\": \"I. Rakitić\",\n            \"Nationality\": \"Croatia\",\n            \"Club\": \"Sevilla FC\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a480d\",\n            \"ID\": \"25798\",\n            \"Name\": \"R. Santa Cruz\",\n            \"Nationality\": \"Paraguay\",\n            \"Club\": \"Olimpia Asunción\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b95\",\n            \"ID\": \"168732\",\n            \"Name\": \"D. Milićević\",\n            \"Nationality\": \"Bosnia Herzegovina\",\n            \"Club\": \"KAS Eupen\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a480e\",\n            \"ID\": \"25924\",\n            \"Name\": \"Capdevila\",\n            \"Nationality\": \"Spain\",\n            \"Club\": \"Lierse SK\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b96\",\n            \"ID\": \"168879\",\n            \"Name\": \"M. Al Shalhoub\",\n            \"Nationality\": \"Saudi Arabia\",\n            \"Club\": \"Al Hilal\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a480f\",\n            \"ID\": \"26709\",\n            \"Name\": \"R. Márquez\",\n            \"Nationality\": \"Mexico\",\n            \"Club\": \"Club Atlas\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b97\",\n            \"ID\": \"168898\",\n            \"Name\": \"Ahmed Hassan\",\n            \"Nationality\": \"Egypt\",\n            \"Club\": \"Egypt\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4810\",\n            \"ID\": \"26992\",\n            \"Name\": \"S. Distin\",\n            \"Nationality\": \"France\",\n            \"Club\": \"Bournemouth\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b98\",\n            \"ID\": \"168950\",\n            \"Name\": \"S. Allagui\",\n            \"Nationality\": \"Tunisia\",\n            \"Club\": \"Royal Excel Mouscron\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4811\",\n            \"ID\": \"28130\",\n            \"Name\": \"Ronaldinho\",\n            \"Nationality\": \"Brazil\",\n            \"Club\": \"Querétaro\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b99\",\n            \"ID\": \"168961\",\n            \"Name\": \"M. Sougou\",\n            \"Nationality\": \"Senegal\",\n            \"Club\": \"Moreirense FC\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4812\",\n            \"ID\": \"28735\",\n            \"Name\": \"J. Krzynówek\",\n            \"Nationality\": \"Poland\",\n            \"Club\": \"Hannover 96\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b9a\",\n            \"ID\": \"168965\",\n            \"Name\": \"R. Riou\",\n            \"Nationality\": \"France\",\n            \"Club\": \"Stade Malherbe Caen\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4813\",\n            \"ID\": \"28765\",\n            \"Name\": \"Zé Roberto\",\n            \"Nationality\": \"Brazil\",\n            \"Club\": \"Palmeiras\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b9b\",\n            \"ID\": \"168984\",\n            \"Name\": \"I. Bangoura\",\n            \"Nationality\": \"Guinea\",\n            \"Club\": \"Al Batin\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4814\",\n            \"ID\": \"29118\",\n            \"Name\": \"S. Ono\",\n            \"Nationality\": \"Japan\",\n            \"Club\": \"Hokkaido Consadole Sapporo\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b9c\",\n            \"ID\": \"169051\",\n            \"Name\": \"F. Guarín\",\n            \"Nationality\": \"Colombia\",\n            \"Club\": \"Shanghai Greenland Shenhua FC\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4815\",\n            \"ID\": \"29161\",\n            \"Name\": \"B. Kouassi\",\n            \"Nationality\": \"Ivory Coast\",\n            \"Club\": \"Angers SCO\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b9d\",\n            \"ID\": \"169078\",\n            \"Name\": \"L. Freeman\",\n            \"Nationality\": \"England\",\n            \"Club\": \"Nottingham Forest\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4816\",\n            \"ID\": \"29552\",\n            \"Name\": \"S. Nakamura\",\n            \"Nationality\": \"Japan\",\n            \"Club\": \"Yokohama FC\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b9e\",\n            \"ID\": \"169100\",\n            \"Name\": \"I. Anya\",\n            \"Nationality\": \"Scotland\",\n            \"Club\": \"Derby County\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4817\",\n            \"ID\": \"30110\",\n            \"Name\": \"D. Berbatov\",\n            \"Nationality\": \"Bulgaria\",\n            \"Club\": \"PAOK\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4b9f\",\n            \"ID\": \"169108\",\n            \"Name\": \"L. Butrón\",\n            \"Nationality\": \"Peru\",\n            \"Club\": \"Alianza Lima\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4ba0\",\n            \"ID\": \"169115\",\n            \"Name\": \"A. Masiello\",\n            \"Nationality\": \"Italy\",\n            \"Club\": \"Genoa\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4818\",\n            \"ID\": \"30540\",\n            \"Name\": \"H. Sarpei\",\n            \"Nationality\": \"Ghana\",\n            \"Club\": \"FC Schalke 04\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4ba1\",\n            \"ID\": \"169126\",\n            \"Name\": \"Ronny\",\n            \"Nationality\": \"Brazil\",\n            \"Club\": \"Hertha BSC\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4819\",\n            \"ID\": \"31432\",\n            \"Name\": \"D. Drogba\",\n            \"Nationality\": \"Ivory Coast\",\n            \"Club\": null\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4ba2\",\n            \"ID\": \"169158\",\n            \"Name\": \"J. Peters\",\n            \"Nationality\": \"Netherlands\",\n            \"Club\": \"Willem II\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4ba3\",\n            \"ID\": \"169181\",\n            \"Name\": \"K. Vermeer\",\n            \"Nationality\": \"Netherlands\",\n            \"Club\": \"Los Angeles FC\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a481a\",\n            \"ID\": \"31831\",\n            \"Name\": \"K. Källström\",\n            \"Nationality\": \"Sweden\",\n            \"Club\": \"Djurgårdens IF\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a481b\",\n            \"ID\": \"34079\",\n            \"Name\": \"A. Cole\",\n            \"Nationality\": \"England\",\n            \"Club\": \"Derby County\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a481c\",\n            \"ID\": \"34373\",\n            \"Name\": \"A. Thompson\",\n            \"Nationality\": \"Australia\",\n            \"Club\": \"Melbourne Victory\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4ba4\",\n            \"ID\": \"169195\",\n            \"Name\": \"Renato Augusto\",\n            \"Nationality\": \"Brazil\",\n            \"Club\": \"Beijing Sinobo Guoan FC\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a481d\",\n            \"ID\": \"34824\",\n            \"Name\": \"A. Floro Flores\",\n            \"Nationality\": \"Italy\",\n            \"Club\": \"Chievo Verona\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a481e\",\n            \"ID\": \"35713\",\n            \"Name\": \"J. Yobo\",\n            \"Nationality\": \"Nigeria\",\n            \"Club\": \"Fenerbahçe SK\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a481f\",\n            \"ID\": \"36111\",\n            \"Name\": \"K. Beckerman\",\n            \"Nationality\": \"United States\",\n            \"Club\": \"Real Salt Lake\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4820\",\n            \"ID\": \"37576\",\n            \"Name\": \"Ronaldo\",\n            \"Nationality\": \"Brazil\",\n            \"Club\": \"Corinthians\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4821\",\n            \"ID\": \"39386\",\n            \"Name\": \"D. Beasley\",\n            \"Nationality\": \"United States\",\n            \"Club\": \"Houston Dynamo\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4822\",\n            \"ID\": \"39943\",\n            \"Name\": \"J. Park\",\n            \"Nationality\": \"Korea Republic\",\n            \"Club\": \"PSV\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4823\",\n            \"ID\": \"40702\",\n            \"Name\": \"Edmilson\",\n            \"Nationality\": \"Brazil\",\n            \"Club\": \"Ceará Sporting Club\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4824\",\n            \"ID\": \"40898\",\n            \"Name\": \"S. Govou\",\n            \"Nationality\": \"France\",\n            \"Club\": \"Évian Thonon Gaillard FC\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4825\",\n            \"ID\": \"40900\",\n            \"Name\": \"S. Diawara\",\n            \"Nationality\": \"Senegal\",\n            \"Club\": \"OGC Nice\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4826\",\n            \"ID\": \"41233\",\n            \"Name\": \"S. Ameobi\",\n            \"Nationality\": \"Nigeria\",\n            \"Club\": \"Notts County\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4827\",\n            \"ID\": \"41236\",\n            \"Name\": \"Z. Ibrahimović\",\n            \"Nationality\": \"Sweden\",\n            \"Club\": \"Milan\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4828\",\n            \"ID\": \"41635\",\n            \"Name\": \"P. Mexès\",\n            \"Nationality\": \"France\",\n            \"Club\": \"Milan\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4829\",\n            \"ID\": \"41734\",\n            \"Name\": \"B. Cheyrou\",\n            \"Nationality\": \"France\",\n            \"Club\": \"Toronto FC\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a482a\",\n            \"ID\": \"41784\",\n            \"Name\": \"M. Niang\",\n            \"Nationality\": \"Senegal\",\n            \"Club\": \"AC Arles Avignon\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a482b\",\n            \"ID\": \"44897\",\n            \"Name\": \"J. Dudek\",\n            \"Nationality\": \"Poland\",\n            \"Club\": \"Real Madrid\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a482c\",\n            \"ID\": \"45074\",\n            \"Name\": \"J. McFadden\",\n            \"Nationality\": \"Scotland\",\n            \"Club\": \"Motherwell\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a482d\",\n            \"ID\": \"45119\",\n            \"Name\": \"Mikel Arteta\",\n            \"Nationality\": \"Spain\",\n            \"Club\": \"Arsenal\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a482e\",\n            \"ID\": \"45186\",\n            \"Name\": \"Joaquín\",\n            \"Nationality\": \"Spain\",\n            \"Club\": \"Real Betis\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a482f\",\n            \"ID\": \"45197\",\n            \"Name\": \"Xabi Alonso\",\n            \"Nationality\": \"Spain\",\n            \"Club\": \"FC Bayern München\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4830\",\n            \"ID\": \"45472\",\n            \"Name\": \"A. Hleb\",\n            \"Nationality\": \"Belarus\",\n            \"Club\": \"Krylya Sovetov Samara\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4831\",\n            \"ID\": \"45534\",\n            \"Name\": \"M. Antonsson\",\n            \"Nationality\": \"Sweden\",\n            \"Club\": \"FC København\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4832\",\n            \"ID\": \"45574\",\n            \"Name\": \"R. van der Vaart\",\n            \"Nationality\": \"Netherlands\",\n            \"Club\": \"Esbjerg fB\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4ba5\",\n            \"ID\": \"169208\",\n            \"Name\": \"A. Reyna\",\n            \"Nationality\": \"Mexico\",\n            \"Club\": \"Tiburones Rojos de Veracruz\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4833\",\n            \"ID\": \"45595\",\n            \"Name\": \"D. Bonera\",\n            \"Nationality\": \"Italy\",\n            \"Club\": \"Villarreal CF\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4834\",\n            \"ID\": \"45605\",\n            \"Name\": \"M. Brighi\",\n            \"Nationality\": \"Italy\",\n            \"Club\": \"Empoli\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4835\",\n            \"ID\": \"45609\",\n            \"Name\": \"D. Bierofka\",\n            \"Nationality\": \"Germany\",\n            \"Club\": \"TSV 1860 München\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4836\",\n            \"ID\": \"45661\",\n            \"Name\": \"Raúl\",\n            \"Nationality\": \"Spain\",\n            \"Club\": \"FC Schalke 04\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4837\",\n            \"ID\": \"45674\",\n            \"Name\": \"M. Essien\",\n            \"Nationality\": \"Ghana\",\n            \"Club\": \"Panathinaikos FC\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4ba6\",\n            \"ID\": \"169214\",\n            \"Name\": \"S. Sinclair\",\n            \"Nationality\": \"England\",\n            \"Club\": \"Preston North End\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4ba7\",\n            \"ID\": \"169216\",\n            \"Name\": \"S. Long\",\n            \"Nationality\": \"Republic of Ireland\",\n            \"Club\": \"Southampton\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4ba8\",\n            \"ID\": \"169317\",\n            \"Name\": \"T. Elyounoussi\",\n            \"Nationality\": \"Norway\",\n            \"Club\": \"Shonan Bellmare\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4ba9\",\n            \"ID\": \"169321\",\n            \"Name\": \"M. Fraga\",\n            \"Nationality\": \"Mexico\",\n            \"Club\": \"Mazatlán FC\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4838\",\n            \"ID\": \"45707\",\n            \"Name\": \"M. Zidan\",\n            \"Nationality\": \"Egypt\",\n            \"Club\": \"1. FSV Mainz 05\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4839\",\n            \"ID\": \"45842\",\n            \"Name\": \"J. Olsson\",\n            \"Nationality\": \"Sweden\",\n            \"Club\": \"Wigan Athletic\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a483a\",\n            \"ID\": \"46175\",\n            \"Name\": \"M. Rosenberg\",\n            \"Nationality\": \"Sweden\",\n            \"Club\": \"Malmö FF\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a483b\",\n            \"ID\": \"46590\",\n            \"Name\": \"C. Samba\",\n            \"Nationality\": \"Congo\",\n            \"Club\": \"Aston Villa\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4baa\",\n            \"ID\": \"169324\",\n            \"Name\": \"A. Ulmer\",\n            \"Nationality\": \"Austria\",\n            \"Club\": \"Austria\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4bab\",\n            \"ID\": \"169343\",\n            \"Name\": \"M. Madl\",\n            \"Nationality\": \"Austria\",\n            \"Club\": \"FK Austria Wien\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a483c\",\n            \"ID\": \"46736\",\n            \"Name\": \"E. Moretti\",\n            \"Nationality\": \"Italy\",\n            \"Club\": \"Torino\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4bac\",\n            \"ID\": \"169345\",\n            \"Name\": \"M. Suttner\",\n            \"Nationality\": \"Austria\",\n            \"Club\": \"FK Austria Wien\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4bad\",\n            \"ID\": \"169370\",\n            \"Name\": \"Óscar Rubio\",\n            \"Nationality\": \"Spain\",\n            \"Club\": \"CE Sabadell FC\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4bae\",\n            \"ID\": \"169386\",\n            \"Name\": \"S. Floccari\",\n            \"Nationality\": \"Italy\",\n            \"Club\": \"SPAL\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4baf\",\n            \"ID\": \"169404\",\n            \"Name\": \"J. Fejzić\",\n            \"Nationality\": \"Bosnia Herzegovina\",\n            \"Club\": \"Eintracht Braunschweig\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4bb0\",\n            \"ID\": \"169415\",\n            \"Name\": \"E. Hernández\",\n            \"Nationality\": \"Mexico\",\n            \"Club\": \"Club Atlas\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4bb1\",\n            \"ID\": \"169416\",\n            \"Name\": \"C. Vela\",\n            \"Nationality\": \"Mexico\",\n            \"Club\": \"Los Angeles FC\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4bb2\",\n            \"ID\": \"169423\",\n            \"Name\": \"S. Ekramy\",\n            \"Nationality\": \"Egypt\",\n            \"Club\": \"Egypt\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4bb3\",\n            \"ID\": \"169426\",\n            \"Name\": \"Barragán B\",\n            \"Nationality\": \"Spain\",\n            \"Club\": \"Real Betis\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4bb4\",\n            \"ID\": \"169432\",\n            \"Name\": \"M. Lacen\",\n            \"Nationality\": \"Algeria\",\n            \"Club\": \"Málaga CF\"\n        },\n        {\n            \"_id\": \"6052cc4289999e12d56a4bb5\",\n            \"ID\": \"169447\",\n            \"Name\": \"M. McGlinchey\",\n            \"Nationality\": \"New Zealand\",\n            \"Club\": \"Central Coast Mariners\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4772\",\n            \"ID\": \"36\",\n            \"Name\": \"D. Yorke\",\n            \"Nationality\": \"Trinidad &amp; Tobago\",\n            \"Club\": \"Sunderland\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4774\",\n            \"ID\": \"61\",\n            \"Name\": \"D. Odonkor\",\n            \"Nationality\": \"Germany\",\n            \"Club\": \"Alemannia Aachen\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4776\",\n            \"ID\": \"241\",\n            \"Name\": \"R. Giggs\",\n            \"Nationality\": \"Wales\",\n            \"Club\": \"Manchester United\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4770\",\n            \"ID\": \"16\",\n            \"Name\": \"G. Pasquale\",\n            \"Nationality\": \"Italy\",\n            \"Club\": \"Udinese\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4773\",\n            \"ID\": \"41\",\n            \"Name\": \"Iniesta\",\n            \"Nationality\": \"Spain\",\n            \"Club\": \"Vissel Kobe\"\n        },\n        {\n            \"_id\": \"6052cc4189999e12d56a4775\",\n            \"ID\": \"80\",\n            \"Name\": \"E. Belözoğlu\",\n            \"Nationality\": \"Turkey\",\n            \"Club\": \"Fenerbahçe SK\"\n        }\n    ]\n}"
+				},
+				{
+					"name": "GET ALL PLAYERS Is not verified",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "3d92dc81226fae546b951fb5cd4d1963feaed73652086dd08046c69aa5d60f15d488c1d32ce1e1f8edce5bca5a863d2e2493854415ccb7fb9aea4004badeb789d37572e1f9dfa9e3f50f886429c0d948a91e3c4b01cf0522f267eb964d1a160f2ce3df9bf2a268c6fab50b485491dd7fe856d0f78d068c11da5963cbd96575f19c894fc330b1ab68a0625e79359523f2b9923866511e4f51f3ea15b2d3839f8db6297785af6164f398a5704699f0daac6893827875b3fb4036d13a544f875831443fb1e1e3555a425dc18bdfc43381809dd7ab7f8551af92bdf835812e0f05fb836f22675dc7aa77026868a973836bfea190e487a716bd380cd3ddb80e91034a2136a870a5bf31bb8d4b62"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{URL}}:3000/api/v1/player/all",
+							"host": [
+								"{{URL}}"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"player",
+								"all"
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "x-access-token, Origin, Content-Type, Accept"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "60"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3c-USnW+3wfe2gop+kzU12uQDSNzv0\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 12 Apr 2021 10:13:47 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 403,\n    \"message\": \"Email is not verified\",\n    \"data\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "GET ALL PLAYERS BY PAGE",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNWVmZTFhMDIwZGNhMTkwODlmOTg1OSIsImlhdCI6MTYxNjgzODQwOSwiZXhwIjoxNjE2OTI0ODA5fQ.4gCYZRuReOFSwIfhKqWIG7z-UgercMqXiRnREJbI4WY"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{URL}}:3000/api/v1/player/page/2",
+					"host": [
+						"{{URL}}"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"player",
+						"page",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET ALL PLAYERS BY PAGE Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "fc45b3a3414d14a9a8206c51974e0f5eaec81190e0c0651a845636c3e08a4ae2dcc913829fe30f579fdc8ddd1f5a61cd93964ffae7d783a872d3aa5fe73061a1dee63956ba29a3624ee001a1b65fbe9740eaf95c034f650c3775a74d0e7d0b846bb36f0ecd05620663bb00c51129c3531636fd4855882f75dff372e0c1127ea2ef15fad4640e48fc522e2450b806d9a49c17a5203968335e899f89300cec09adad0f5fd0c96ff418967bd9cdab96a0ab05926e35d8a2936c98bd0d71a447626d4c09e316dc7c0f01639754d7e62663274458bc61e70cd9b48738da9642e3e1de88328653e91b4f480e70aee6488bbe6bb72a56dc05c8e0bccde9330d697ecda9221ba55b7dc8128d204015"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{URL}}:3000/api/v1/player/page/2",
+							"host": [
+								"{{URL}}"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"player",
+								"page",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "x-access-token, Origin, Content-Type, Accept"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "13084"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"331c-eipEucknrPlRufJRRV11ubn40RA\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 12 Apr 2021 08:56:03 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"message\": \"Player Added Successfully\",\n    \"data\": {\n        \"players\": [\n            {\n                \"updated_at\": \"2021-04-12T06:50:23.049Z\",\n                \"_id\": \"6052cc4189999e12d56a47c3\",\n                \"ID\": \"7142\",\n                \"Name\": \"K. Kaladze\",\n                \"Age\": \"33\",\n                \"OVA\": \"76\",\n                \"Nationality\": \"Georgia\",\n                \"Club\": \"Genoa\",\n                \"BOV\": \"75\",\n                \"BP\": \"CB\",\n                \"Position\": null,\n                \"Player Photo\": \"https://cdn.sofifa.com/players/007/142/12_120.png\",\n                \"Club Logo\": \"https://cdn.sofifa.com/teams/110556/light_60.png\",\n                \"Flag Photo\": \"https://cdn.sofifa.com/flags/ge.png\",\n                \"POT\": \"76\",\n                \"Team & Contract\": \"Genoa 2010 ~ 2013\",\n                \"Height\": \"6'1\\\"\",\n                \"Weight\": \"168lbs\",\n                \"foot\": \"Left\",\n                \"Growth\": \"0\",\n                \"Joined\": \"Jan 1, 2010\",\n                \"Loan Date End\": null,\n                \"Value\": \"€1.2M\",\n                \"Wage\": \"€20K\",\n                \"Release Clause\": \"€0\",\n                \"Contract\": \"2010 ~ 2013\",\n                \"Gender\": \"Male\",\n                \"__v\": 0\n            },\n            {\n                \"updated_at\": \"2021-04-12T06:50:23.049Z\",\n                \"_id\": \"6052cc4189999e12d56a47c2\",\n                \"ID\": \"6975\",\n                \"Name\": \"F. Ljungberg\",\n                \"Age\": \"33\",\n                \"OVA\": \"74\",\n                \"Nationality\": \"Sweden\",\n                \"Club\": \"Celtic\",\n                \"BOV\": \"75\",\n                \"BP\": \"RM\",\n                \"Position\": null,\n                \"Player Photo\": \"https://cdn.sofifa.com/players/006/975/11_120.png\",\n                \"Club Logo\": \"https://cdn.sofifa.com/teams/78/light_60.png\",\n                \"Flag Photo\": \"https://cdn.sofifa.com/flags/se.png\",\n                \"POT\": \"83\",\n                \"Team & Contract\": \"Celtic 2005 ~ 2013\",\n                \"Height\": \"5'9\\\"\",\n                \"Weight\": \"161lbs\",\n                \"foot\": \"Right\",\n                \"Growth\": \"9\",\n                \"Joined\": \"Jan 1, 2005\",\n                \"Loan Date End\": null,\n                \"Value\": \"€0\",\n                \"Wage\": \"€0\",\n                \"Release Clause\": \"€0\",\n                \"Contract\": \"2005 ~ 2013\",\n                \"Gender\": \"Male\",\n                \"__v\": 0\n            },\n            {\n                \"updated_at\": \"2021-04-12T06:50:23.049Z\",\n                \"_id\": \"6052cc4189999e12d56a47c1\",\n                \"ID\": \"6908\",\n                \"Name\": \"D. Stanković\",\n                \"Age\": \"33\",\n                \"OVA\": \"78\",\n                \"Nationality\": \"Serbia\",\n                \"Club\": \"Inter\",\n                \"BOV\": \"78\",\n                \"BP\": \"CAM\",\n                \"Position\": null,\n                \"Player Photo\": \"https://cdn.sofifa.com/players/006/908/13_120.png\",\n                \"Club Logo\": \"https://cdn.sofifa.com/teams/44/light_60.png\",\n                \"Flag Photo\": \"https://cdn.sofifa.com/flags/rs.png\",\n                \"POT\": \"78\",\n                \"Team & Contract\": \"Inter 2004 ~ 2013\",\n                \"Height\": \"5'11\\\"\",\n                \"Weight\": \"165lbs\",\n                \"foot\": \"Right\",\n                \"Growth\": \"0\",\n                \"Joined\": \"Jul 1, 2004\",\n                \"Loan Date End\": null,\n                \"Value\": \"€2.7M\",\n                \"Wage\": \"€30K\",\n                \"Release Clause\": \"€0\",\n                \"Contract\": \"2004 ~ 2013\",\n                \"Gender\": \"Male\",\n                \"__v\": 0\n            },\n            {\n                \"updated_at\": \"2021-04-12T06:50:23.049Z\",\n                \"_id\": \"6052cc4189999e12d56a4781\",\n                \"ID\": \"684\",\n                \"Name\": \"M. Schwarzer\",\n                \"Age\": \"42\",\n                \"OVA\": \"73\",\n                \"Nationality\": \"Australia\",\n                \"Club\": \"Leicester City\",\n                \"BOV\": \"73\",\n                \"BP\": \"GK\",\n                \"Position\": null,\n                \"Player Photo\": \"https://cdn.sofifa.com/players/000/684/16_120.png\",\n                \"Club Logo\": \"https://cdn.sofifa.com/teams/95/light_60.png\",\n                \"Flag Photo\": \"https://cdn.sofifa.com/flags/au.png\",\n                \"POT\": \"73\",\n                \"Team & Contract\": \"Leicester City 2015 ~ 2016\",\n                \"Height\": \"6'4\\\"\",\n                \"Weight\": \"209lbs\",\n                \"foot\": \"Right\",\n                \"Growth\": \"0\",\n                \"Joined\": \"Jan 6, 2015\",\n                \"Loan Date End\": null,\n                \"Value\": \"€500K\",\n                \"Wage\": \"€15K\",\n                \"Release Clause\": \"€0\",\n                \"Contract\": \"2015 ~ 2016\",\n                \"Gender\": \"Male\",\n                \"__v\": 0\n            },\n            {\n                \"updated_at\": \"2021-04-12T06:50:23.049Z\",\n                \"_id\": \"6052cc4189999e12d56a47c0\",\n                \"ID\": \"6826\",\n                \"Name\": \"G. Barry\",\n                \"Age\": \"38\",\n                \"OVA\": \"70\",\n                \"Nationality\": \"England\",\n                \"Club\": \"West Bromwich Albion\",\n                \"BOV\": \"70\",\n                \"BP\": \"CDM\",\n                \"Position\": \"CDM CM\",\n                \"Player Photo\": \"https://cdn.sofifa.com/players/006/826/20_120.png\",\n                \"Club Logo\": \"https://cdn.sofifa.com/teams/109/light_60.png\",\n                \"Flag Photo\": \"https://cdn.sofifa.com/flags/gb-eng.png\",\n                \"POT\": \"70\",\n                \"Team & Contract\": \"West Bromwich Albion 2017 ~ 2020\",\n                \"Height\": \"6'0\\\"\",\n                \"Weight\": \"172lbs\",\n                \"foot\": \"Left\",\n                \"Growth\": \"0\",\n                \"Joined\": \"Aug 15, 2017\",\n                \"Loan Date End\": null,\n                \"Value\": \"€375K\",\n                \"Wage\": \"€15K\",\n                \"Release Clause\": \"€713K\",\n                \"Contract\": \"2017 ~ 2020\",\n                \"Gender\": \"Male\",\n                \"__v\": 0\n            },\n            {\n                \"updated_at\": \"2021-04-12T06:50:23.049Z\",\n                \"_id\": \"6052cc4189999e12d56a4780\",\n                \"ID\": \"670\",\n                \"Name\": \"Zulu\",\n                \"Age\": \"26\",\n                \"OVA\": \"66\",\n                \"Nationality\": \"Brazil\",\n                \"Club\": \"Pohang Steelers\",\n                \"BOV\": \"66\",\n                \"BP\": \"ST\",\n                \"Position\": null,\n                \"Player Photo\": \"https://cdn.sofifa.com/players/000/670/11_120.png\",\n                \"Club Logo\": \"https://cdn.sofifa.com/teams/1474/light_60.png\",\n                \"Flag Photo\": \"https://cdn.sofifa.com/flags/br.png\",\n                \"POT\": \"72\",\n                \"Team & Contract\": \"Pohang Steelers 2005 ~ 2013\",\n                \"Height\": \"6'4\\\"\",\n                \"Weight\": \"198lbs\",\n                \"foot\": \"Right\",\n                \"Growth\": \"6\",\n                \"Joined\": \"Jan 1, 2005\",\n                \"Loan Date End\": null,\n                \"Value\": \"€0\",\n                \"Wage\": \"€0\",\n                \"Release Clause\": \"€0\",\n                \"Contract\": \"2005 ~ 2013\",\n                \"Gender\": \"Male\",\n                \"__v\": 0\n            },\n            {\n                \"updated_at\": \"2021-04-12T06:50:23.049Z\",\n                \"_id\": \"6052cc4189999e12d56a47bf\",\n                \"ID\": \"6235\",\n                \"Name\": \"P. Nedved\",\n                \"Age\": \"35\",\n                \"OVA\": \"80\",\n                \"Nationality\": \"Czech Republic\",\n                \"Club\": \"Juventus\",\n                \"BOV\": \"81\",\n                \"BP\": \"CF\",\n                \"Position\": \"LM\",\n                \"Player Photo\": \"https://cdn.sofifa.com/players/006/235/09_120.png\",\n                \"Club Logo\": \"https://cdn.sofifa.com/teams/45/light_60.png\",\n                \"Flag Photo\": \"https://cdn.sofifa.com/flags/cz.png\",\n                \"POT\": \"88\",\n                \"Team & Contract\": \"Juventus 2009\",\n                \"Height\": \"5'10\\\"\",\n                \"Weight\": \"154lbs\",\n                \"foot\": \"Right\",\n                \"Growth\": \"8\",\n                \"Joined\": null,\n                \"Loan Date End\": null,\n                \"Value\": \"€0\",\n                \"Wage\": \"€0\",\n                \"Release Clause\": \"€0\",\n                \"Contract\": \"2009\",\n                \"Gender\": \"Male\",\n                \"__v\": 0\n            },\n            {\n                \"updated_at\": \"2021-04-12T06:50:23.049Z\",\n                \"_id\": \"6052cc4189999e12d56a4774\",\n                \"ID\": \"61\",\n                \"Name\": \"D. Odonkor\",\n                \"Age\": \"27\",\n                \"OVA\": \"66\",\n                \"Nationality\": \"Germany\",\n                \"Club\": \"Alemannia Aachen\",\n                \"BOV\": \"66\",\n                \"BP\": \"RW\",\n                \"Position\": \"RW RM\",\n                \"Player Photo\": \"https://cdn.sofifa.com/players/000/061/12_120.png\",\n                \"Club Logo\": \"https://cdn.sofifa.com/teams/1826/light_60.png\",\n                \"Flag Photo\": \"https://cdn.sofifa.com/flags/de.png\",\n                \"POT\": \"70\",\n                \"Team & Contract\": \"Alemannia Aachen 2011 ~ 2012\",\n                \"Height\": \"5'8\\\"\",\n                \"Weight\": \"163lbs\",\n                \"foot\": \"Right\",\n                \"Growth\": \"4\",\n                \"Joined\": \"Jan 1, 2011\",\n                \"Loan Date End\": null,\n                \"Value\": \"€725K\",\n                \"Wage\": \"€5K\",\n                \"Release Clause\": \"€0\",\n                \"Contract\": \"2011 ~ 2012\",\n                \"Gender\": \"Male\",\n                \"__v\": 0\n            },\n            {\n                \"updated_at\": \"2021-04-12T06:50:23.049Z\",\n                \"_id\": \"6052cc4189999e12d56a47be\",\n                \"ID\": \"6083\",\n                \"Name\": \"M. Jankulovski\",\n                \"Age\": \"33\",\n                \"OVA\": \"72\",\n                \"Nationality\": \"Czech Republic\",\n                \"Club\": \"Milan\",\n                \"BOV\": \"75\",\n                \"BP\": \"LM\",\n                \"Position\": \"LWB LM LB LW\",\n                \"Player Photo\": \"https://cdn.sofifa.com/players/006/083/11_120.png\",\n                \"Club Logo\": \"https://cdn.sofifa.com/teams/47/light_60.png\",\n                \"Flag Photo\": \"https://cdn.sofifa.com/flags/cz.png\",\n                \"POT\": \"85\",\n                \"Team & Contract\": \"Milan 2005 ~ 2011\",\n                \"Height\": \"6'0\\\"\",\n                \"Weight\": \"181lbs\",\n                \"foot\": \"Left\",\n                \"Growth\": \"13\",\n                \"Joined\": \"Jan 1, 2005\",\n                \"Loan Date End\": null,\n                \"Value\": \"€0\",\n                \"Wage\": \"€0\",\n                \"Release Clause\": \"€0\",\n                \"Contract\": \"2005 ~ 2011\",\n                \"Gender\": \"Male\",\n                \"__v\": 0\n            },\n            {\n                \"updated_at\": \"2021-04-12T06:50:23.049Z\",\n                \"_id\": \"6052cc4189999e12d56a47bd\",\n                \"ID\": \"5984\",\n                \"Name\": \"D. Trezeguet\",\n                \"Age\": \"35\",\n                \"OVA\": \"74\",\n                \"Nationality\": \"France\",\n                \"Club\": \"Newell's Old Boys\",\n                \"BOV\": \"74\",\n                \"BP\": \"ST\",\n                \"Position\": \"ST\",\n                \"Player Photo\": \"https://cdn.sofifa.com/players/005/984/14_120.png\",\n                \"Club Logo\": \"https://cdn.sofifa.com/teams/110396/light_60.png\",\n                \"Flag Photo\": \"https://cdn.sofifa.com/flags/fr.png\",\n                \"POT\": \"74\",\n                \"Team & Contract\": \"Newell's Old Boys 2013 ~ 2014\",\n                \"Height\": \"6'3\\\"\",\n                \"Weight\": \"176lbs\",\n                \"foot\": \"Right\",\n                \"Growth\": \"0\",\n                \"Joined\": \"Jul 22, 2013\",\n                \"Loan Date End\": null,\n                \"Value\": \"€1.1M\",\n                \"Wage\": \"€45K\",\n                \"Release Clause\": \"€0\",\n                \"Contract\": \"2013 ~ 2014\",\n                \"Gender\": \"Male\",\n                \"__v\": 0\n            },\n            {\n                \"updated_at\": \"2021-04-12T06:50:23.049Z\",\n                \"_id\": \"6052cc4189999e12d56a47bc\",\n                \"ID\": \"5879\",\n                \"Name\": \"A. Gilardino\",\n                \"Age\": \"34\",\n                \"OVA\": \"72\",\n                \"Nationality\": \"Italy\",\n                \"Club\": \"Spezia\",\n                \"BOV\": \"71\",\n                \"BP\": \"ST\",\n                \"Position\": \"ST\",\n                \"Player Photo\": \"https://cdn.sofifa.com/players/005/879/18_120.png\",\n                \"Club Logo\": \"https://cdn.sofifa.com/teams/110741/light_60.png\",\n                \"Flag Photo\": \"https://cdn.sofifa.com/flags/it.png\",\n                \"POT\": \"72\",\n                \"Team & Contract\": \"Spezia 2017 ~ 2019\",\n                \"Height\": \"6'0\\\"\",\n                \"Weight\": \"174lbs\",\n                \"foot\": \"Right\",\n                \"Growth\": \"0\",\n                \"Joined\": \"Oct 3, 2017\",\n                \"Loan Date End\": null,\n                \"Value\": \"€1.6M\",\n                \"Wage\": \"€5K\",\n                \"Release Clause\": \"€2.6M\",\n                \"Contract\": \"2017 ~ 2019\",\n                \"Gender\": \"Male\",\n                \"__v\": 0\n            },\n            {\n                \"updated_at\": \"2021-04-12T06:50:23.049Z\",\n                \"_id\": \"6052cc4189999e12d56a47bb\",\n                \"ID\": \"5809\",\n                \"Name\": \"N. Anelka\",\n                \"Age\": \"34\",\n                \"OVA\": \"77\",\n                \"Nationality\": \"France\",\n                \"Club\": \"West Bromwich Albion\",\n                \"BOV\": \"76\",\n                \"BP\": \"ST\",\n                \"Position\": \"ST\",\n                \"Player Photo\": \"https://cdn.sofifa.com/players/005/809/14_120.png\",\n                \"Club Logo\": \"https://cdn.sofifa.com/teams/109/light_60.png\",\n                \"Flag Photo\": \"https://cdn.sofifa.com/flags/fr.png\",\n                \"POT\": \"77\",\n                \"Team & Contract\": \"West Bromwich Albion 2013 ~ 2014\",\n                \"Height\": \"6'1\\\"\",\n                \"Weight\": \"176lbs\",\n                \"foot\": \"Right\",\n                \"Growth\": \"0\",\n                \"Joined\": \"Jul 4, 2013\",\n                \"Loan Date End\": null,\n                \"Value\": \"€2.1M\",\n                \"Wage\": \"€45K\",\n                \"Release Clause\": \"€0\",\n                \"Contract\": \"2013 ~ 2014\",\n                \"Gender\": \"Male\",\n                \"__v\": 0\n            },\n            {\n                \"updated_at\": \"2021-04-12T06:50:23.049Z\",\n                \"_id\": \"6052cc4189999e12d56a47ba\",\n                \"ID\": \"5744\",\n                \"Name\": \"E. Gudjohnsen\",\n                \"Age\": \"36\",\n                \"OVA\": \"71\",\n                \"Nationality\": \"Iceland\",\n                \"Club\": \"Molde FK\",\n                \"BOV\": \"71\",\n                \"BP\": \"CF\",\n                \"Position\": null,\n                \"Player Photo\": \"https://cdn.sofifa.com/players/005/744/16_120.png\",\n                \"Club Logo\": \"https://cdn.sofifa.com/teams/417/light_60.png\",\n                \"Flag Photo\": \"https://cdn.sofifa.com/flags/is.png\",\n                \"POT\": \"71\",\n                \"Team & Contract\": \"Molde FK 2016 ~ 2018\",\n                \"Height\": \"6'1\\\"\",\n                \"Weight\": \"196lbs\",\n                \"foot\": \"Right\",\n                \"Growth\": \"0\",\n                \"Joined\": \"Feb 13, 2016\",\n                \"Loan Date End\": null,\n                \"Value\": \"€190K\",\n                \"Wage\": \"€25K\",\n                \"Release Clause\": \"€0\",\n                \"Contract\": \"2016 ~ 2018\",\n                \"Gender\": \"Male\",\n                \"__v\": 0\n            },\n            {\n                \"updated_at\": \"2021-04-12T06:50:23.049Z\",\n                \"_id\": \"6052cc4189999e12d56a47b9\",\n                \"ID\": \"5740\",\n                \"Name\": \"J. Stam\",\n                \"Age\": \"34\",\n                \"OVA\": \"82\",\n                \"Nationality\": \"Netherlands\",\n                \"Club\": \"Ajax\",\n                \"BOV\": \"82\",\n                \"BP\": \"CB\",\n                \"Position\": null,\n                \"Player Photo\": \"https://cdn.sofifa.com/players/005/740/08_120.png\",\n                \"Club Logo\": \"https://cdn.sofifa.com/teams/245/light_60.png\",\n                \"Flag Photo\": \"https://cdn.sofifa.com/flags/nl.png\",\n                \"POT\": \"90\",\n                \"Team & Contract\": \"Ajax 2008\",\n                \"Height\": \"6'2\\\"\",\n                \"Weight\": \"190lbs\",\n                \"foot\": \"Right\",\n                \"Growth\": \"8\",\n                \"Joined\": null,\n                \"Loan Date End\": null,\n                \"Value\": \"€0\",\n                \"Wage\": \"€0\",\n                \"Release Clause\": \"€0\",\n                \"Contract\": \"2008\",\n                \"Gender\": \"Male\",\n                \"__v\": 0\n            },\n            {\n                \"updated_at\": \"2021-04-12T06:50:23.049Z\",\n                \"_id\": \"6052cc4189999e12d56a477f\",\n                \"ID\": \"570\",\n                \"Name\": \"A. Okocha\",\n                \"Age\": \"33\",\n                \"OVA\": \"73\",\n                \"Nationality\": \"Nigeria\",\n                \"Club\": \"Hull City\",\n                \"BOV\": \"76\",\n                \"BP\": \"CF\",\n                \"Position\": null,\n                \"Player Photo\": \"https://cdn.sofifa.com/players/000/570/08_120.png\",\n                \"Club Logo\": \"https://cdn.sofifa.com/teams/1952/light_60.png\",\n                \"Flag Photo\": \"https://cdn.sofifa.com/flags/ng.png\",\n                \"POT\": \"90\",\n                \"Team & Contract\": \"Hull City 2009\",\n                \"Height\": \"5'8\\\"\",\n                \"Weight\": \"154lbs\",\n                \"foot\": \"Right\",\n                \"Growth\": \"17\",\n                \"Joined\": null,\n                \"Loan Date End\": null,\n                \"Value\": \"€0\",\n                \"Wage\": \"€0\",\n                \"Release Clause\": \"€0\",\n                \"Contract\": \"2009\",\n                \"Gender\": \"Male\",\n                \"__v\": 0\n            },\n            {\n                \"updated_at\": \"2021-04-12T06:50:23.049Z\",\n                \"_id\": \"6052cc4189999e12d56a47b8\",\n                \"ID\": \"5680\",\n                \"Name\": \"P. Kluivert\",\n                \"Age\": \"30\",\n                \"OVA\": \"81\",\n                \"Nationality\": \"Netherlands\",\n                \"Club\": \"LOSC Lille\",\n                \"BOV\": \"81\",\n                \"BP\": \"ST\",\n                \"Position\": null,\n                \"Player Photo\": \"https://cdn.sofifa.com/players/005/680/08_120.png\",\n                \"Club Logo\": \"https://cdn.sofifa.com/teams/65/light_60.png\",\n                \"Flag Photo\": \"https://cdn.sofifa.com/flags/nl.png\",\n                \"POT\": \"81\",\n                \"Team & Contract\": \"LOSC Lille 2007\",\n                \"Height\": \"6'2\\\"\",\n                \"Weight\": \"176lbs\",\n                \"foot\": \"Right\",\n                \"Growth\": \"0\",\n                \"Joined\": null,\n                \"Loan Date End\": null,\n                \"Value\": \"€0\",\n                \"Wage\": \"€0\",\n                \"Release Clause\": \"€0\",\n                \"Contract\": \"2007\",\n                \"Gender\": \"Male\",\n                \"__v\": 0\n            },\n            {\n                \"updated_at\": \"2021-04-12T06:50:23.049Z\",\n                \"_id\": \"6052cc4189999e12d56a47b7\",\n                \"ID\": \"5673\",\n                \"Name\": \"J. Litmanen\",\n                \"Age\": \"39\",\n                \"OVA\": \"75\",\n                \"Nationality\": \"Finland\",\n                \"Club\": \"Finland\",\n                \"BOV\": \"75\",\n                \"BP\": \"CAM\",\n                \"Position\": null,\n                \"Player Photo\": \"https://cdn.sofifa.com/players/005/673/11_120.png\",\n                \"Club Logo\": \"https://cdn.sofifa.com/teams/1334/light_60.png\",\n                \"Flag Photo\": \"https://cdn.sofifa.com/flags/fi.png\",\n                \"POT\": \"86\",\n                \"Team & Contract\": \"Finland Free\",\n                \"Height\": \"5'11\\\"\",\n                \"Weight\": \"176lbs\",\n                \"foot\": \"Right\",\n                \"Growth\": \"11\",\n                \"Joined\": \"Jan 1, 2008\",\n                \"Loan Date End\": null,\n                \"Value\": \"€0\",\n                \"Wage\": \"€0\",\n                \"Release Clause\": \"€0\",\n                \"Contract\": \"Free\",\n                \"Gender\": \"Male\",\n                \"__v\": 0\n            },\n            {\n                \"updated_at\": \"2021-04-12T06:50:23.049Z\",\n                \"_id\": \"6052cc4189999e12d56a47b6\",\n                \"ID\": \"5672\",\n                \"Name\": \"E. Davids\",\n                \"Age\": \"39\",\n                \"OVA\": \"64\",\n                \"Nationality\": \"Netherlands\",\n                \"Club\": \"Barnet\",\n                \"BOV\": \"69\",\n                \"BP\": \"CDM\",\n                \"Position\": \"CM CDM LM CAM\",\n                \"Player Photo\": \"https://cdn.sofifa.com/players/005/672/13_120.png\",\n                \"Club Logo\": \"https://cdn.sofifa.com/teams/135/light_60.png\",\n                \"Flag Photo\": \"https://cdn.sofifa.com/flags/nl.png\",\n                \"POT\": \"64\",\n                \"Team & Contract\": \"Barnet 2012 ~ 2014\",\n                \"Height\": \"5'7\\\"\",\n                \"Weight\": \"150lbs\",\n                \"foot\": \"Left\",\n                \"Growth\": \"0\",\n                \"Joined\": \"Oct 1, 2012\",\n                \"Loan Date End\": null,\n                \"Value\": \"€1K\",\n                \"Wage\": \"€0\",\n                \"Release Clause\": \"€0\",\n                \"Contract\": \"2012 ~ 2014\",\n                \"Gender\": \"Male\",\n                \"__v\": 0\n            },\n            {\n                \"updated_at\": \"2021-04-12T06:50:23.049Z\",\n                \"_id\": \"6052cc4189999e12d56a47b5\",\n                \"ID\": \"5589\",\n                \"Name\": \"Figo\",\n                \"Age\": \"35\",\n                \"OVA\": \"78\",\n                \"Nationality\": \"Portugal\",\n                \"Club\": \"Inter\",\n                \"BOV\": \"81\",\n                \"BP\": \"CF\",\n                \"Position\": \"RW\",\n                \"Player Photo\": \"https://cdn.sofifa.com/players/005/589/09_120.png\",\n                \"Club Logo\": \"https://cdn.sofifa.com/teams/44/light_60.png\",\n                \"Flag Photo\": \"https://cdn.sofifa.com/flags/pt.png\",\n                \"POT\": \"86\",\n                \"Team & Contract\": \"Inter 2009\",\n                \"Height\": \"5'11\\\"\",\n                \"Weight\": \"165lbs\",\n                \"foot\": \"Right\",\n                \"Growth\": \"8\",\n                \"Joined\": null,\n                \"Loan Date End\": null,\n                \"Value\": \"€0\",\n                \"Wage\": \"€0\",\n                \"Release Clause\": \"€0\",\n                \"Contract\": \"2009\",\n                \"Gender\": \"Male\",\n                \"__v\": 0\n            },\n            {\n                \"updated_at\": \"2021-04-12T06:50:23.049Z\",\n                \"_id\": \"6052cc4189999e12d56a47b4\",\n                \"ID\": \"5479\",\n                \"Name\": \"Casillas\",\n                \"Age\": \"38\",\n                \"OVA\": \"79\",\n                \"Nationality\": \"Spain\",\n                \"Club\": \"FC Porto\",\n                \"BOV\": \"79\",\n                \"BP\": \"GK\",\n                \"Position\": \"GK\",\n                \"Player Photo\": \"https://cdn.sofifa.com/players/005/479/20_120.png\",\n                \"Club Logo\": \"https://cdn.sofifa.com/teams/236/light_60.png\",\n                \"Flag Photo\": \"https://cdn.sofifa.com/flags/es.png\",\n                \"POT\": \"79\",\n                \"Team & Contract\": \"FC Porto 2015 ~ 2020\",\n                \"Height\": \"6'1\\\"\",\n                \"Weight\": \"185lbs\",\n                \"foot\": \"Left\",\n                \"Growth\": \"0\",\n                \"Joined\": \"Jul 12, 2015\",\n                \"Loan Date End\": null,\n                \"Value\": \"€1.3M\",\n                \"Wage\": \"€8K\",\n                \"Release Clause\": \"€2.6M\",\n                \"Contract\": \"2015 ~ 2020\",\n                \"Gender\": \"Male\",\n                \"__v\": 0\n            }\n        ],\n        \"totalPage\": 15\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "GET PLAYER",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "fc45b3a3414d14a9a8206c51974e0f5eaec81190e0c0651a845636c3e08a4ae2dcc913829fe30f579fdc8ddd1f5a61cd93964ffae7d783a872d3aa5fe73061a1dee63956ba29a3624ee001a1b65fbe9740eaf95c034f650c3775a74d0e7d0b846bb36f0ecd05620663bb00c51129c3531636fd4855882f75dff372e0c1127ea2ef15fad4640e48fc522e2450b806d9a49c17a5203968335e899f89300cec09adad0f5fd0c96ff418967bd9cdab96a0ab05926e35d8a2936c98bd0d71a447626d4c09e316dc7c0f01639754d7e62663274458bc61e70cd9b48738da9642e3e1de88328653e91b4f480e70aee6488bbe6bb72a56dc05c8e0bccde9330d697ecda9221ba55b7dc8128d204015",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}:3000/api/v1/player/1186",
+					"host": [
+						"{{URL}}"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"player",
+						"1186"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET PLAYER Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "fc45b3a3414d14a9a8206c51974e0f5eaec81190e0c0651a845636c3e08a4ae2dcc913829fe30f579fdc8ddd1f5a61cd93964ffae7d783a872d3aa5fe73061a1dee63956ba29a3624ee001a1b65fbe9740eaf95c034f650c3775a74d0e7d0b846bb36f0ecd05620663bb00c51129c3531636fd4855882f75dff372e0c1127ea2ef15fad4640e48fc522e2450b806d9a49c17a5203968335e899f89300cec09adad0f5fd0c96ff418967bd9cdab96a0ab05926e35d8a2936c98bd0d71a447626d4c09e316dc7c0f01639754d7e62663274458bc61e70cd9b48738da9642e3e1de88328653e91b4f480e70aee6488bbe6bb72a56dc05c8e0bccde9330d697ecda9221ba55b7dc8128d204015",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}:3000/api/v1/player/27",
+							"host": [
+								"{{URL}}"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"player",
+								"27"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "x-access-token, Origin, Content-Type, Accept"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1989"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"7c5-KA+J0SsMEgxjBD8SXH38N0ePZTQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 12 Apr 2021 09:24:28 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"message\": \"player Detail Loading...\",\n    \"data\": [\n        {\n            \"updated_at\": \"2021-04-12T09:24:26.899Z\",\n            \"_id\": \"6052cc4189999e12d56a4771\",\n            \"ID\": \"27\",\n            \"Name\": \"J. Cole\",\n            \"Age\": \"33\",\n            \"OVA\": \"71\",\n            \"Nationality\": \"England\",\n            \"Club\": \"Coventry City\",\n            \"BOV\": \"71\",\n            \"BP\": \"CAM\",\n            \"Position\": \"CAM RM RW LM\",\n            \"Player Photo\": \"https://cdn.sofifa.com/players/000/027/16_120.png\",\n            \"Club Logo\": \"https://cdn.sofifa.com/teams/1800/light_60.png\",\n            \"Flag Photo\": \"https://cdn.sofifa.com/flags/gb-eng.png\",\n            \"POT\": \"71\",\n            \"Team & Contract\": \"Coventry City 2016 ~ 2020\",\n            \"Height\": \"5'9\\\"\",\n            \"Weight\": \"161lbs\",\n            \"foot\": \"Right\",\n            \"Growth\": \"0\",\n            \"Joined\": \"Jan 7, 2016\",\n            \"Loan Date End\": null,\n            \"Value\": \"€1.1M\",\n            \"Wage\": \"€15K\",\n            \"Release Clause\": \"€0\",\n            \"Contract\": \"2016 ~ 2020\",\n            \"Attacking\": \"337\",\n            \"Crossing\": \"80\",\n            \"Finishing\": \"64\",\n            \"Heading Accuracy\": \"41\",\n            \"Short Passing\": \"77\",\n            \"Volleys\": \"75.0\",\n            \"Skill\": \"387\",\n            \"Dribbling\": \"79\",\n            \"Curve\": \"84.0\",\n            \"FK Accuracy\": \"77\",\n            \"Long Passing\": \"69\",\n            \"Ball Control\": \"78\",\n            \"Movement\": \"295\",\n            \"Acceleration\": \"48\",\n            \"Sprint Speed\": \"42\",\n            \"Agility\": \"71.0\",\n            \"Reactions\": \"59\",\n            \"Balance\": \"75.0\",\n            \"Power\": \"284\",\n            \"Shot Power\": \"72\",\n            \"Jumping\": \"58.0\",\n            \"Stamina\": \"29\",\n            \"Strength\": \"56\",\n            \"Long Shots\": \"69\",\n            \"Mentality\": \"317\",\n            \"Aggression\": \"69\",\n            \"Interceptions\": \"39.0\",\n            \"Positioning\": \"69.0\",\n            \"Vision\": \"74.0\",\n            \"Penalties\": \"66\",\n            \"Composure\": null,\n            \"Defending\": \"99\",\n            \"Marking\": \"35\",\n            \"Standing Tackle\": \"34\",\n            \"Sliding Tackle\": \"30.0\",\n            \"Goalkeeping\": \"51\",\n            \"GK Diving\": \"9\",\n            \"GK Handling\": \"6\",\n            \"GK Kicking\": \"13\",\n            \"GK Positioning\": \"16\",\n            \"GK Reflexes\": \"7\",\n            \"Total Stats\": \"1770\",\n            \"Base Stats\": \"354\",\n            \"W/F\": \"4 ★\",\n            \"SM\": \"4★\",\n            \"A/W\": \"Medium\",\n            \"D/W\": \"Low\",\n            \"IR\": \"2 ★\",\n            \"PAC\": \"45\",\n            \"SHO\": \"68\",\n            \"PAS\": \"76\",\n            \"DRI\": \"77\",\n            \"DEF\": \"36\",\n            \"PHY\": \"52\",\n            \"Hits\": \"11\",\n            \"LS\": \"64+0\",\n            \"ST\": \"64+0\",\n            \"RS\": \"64+0\",\n            \"LW\": \"70+0\",\n            \"LF\": \"69+0\",\n            \"CF\": \"69+0\",\n            \"RF\": \"69+0\",\n            \"RW\": \"70+0\",\n            \"LAM\": \"71+0\",\n            \"CAM\": \"71+0\",\n            \"RAM\": \"71+0\",\n            \"LM\": \"68+0\",\n            \"LCM\": \"66+0\",\n            \"CM\": \"66+0\",\n            \"RCM\": \"66+0\",\n            \"RM\": \"68+0\",\n            \"LWB\": \"52+0\",\n            \"LDM\": \"54+0\",\n            \"CDM\": \"54+0\",\n            \"RDM\": \"54+0\",\n            \"RWB\": \"52+0\",\n            \"LB\": \"47+0\",\n            \"LCB\": \"46+0\",\n            \"CB\": \"46+0\",\n            \"RCB\": \"46+0\",\n            \"RB\": \"47+0\",\n            \"GK\": \"15+0\",\n            \"Gender\": \"Male\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "CREATE PLAYER",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "3d92dc81226fae546b951fb5cd4d1963feaed73652086dd08046c69aa5d60f15d488c1d32ce1e1f8edce5bca5a863d2e2493854415ccb7fb9aea4004badeb789d37572e1f9dfa9e3f50f886429c0d948a91e3c4b01cf0522f267eb964d1a160f2ce3df9bf2a268c6fab50b485491dd7fe856d0f78d068c11da5963cbd96575f19c894fc330b1ab68a0625e79359523f2b9923866511e4f51f3ea15b2d3839f8db6297785af6164f398a5704699f0daac6893827875b3fb4036d13a544f875831443fb1e1e3555a425dc18bdfc43381809dd7ab7f8551af92bdf835812e0f05fb836f22675dc7aa77026868a973836bfea190e487a716bd380cd3ddb80e91034a2136a870a5bf31bb8d4b62",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ID\" : \"2\",\r\n    \"Name\" : \"G. Pasquale\",\r\n    \"Age\" : \"33\",\r\n    \"OVA\" : \"69\",\r\n    \"Nationality\" : \"Italy\",\r\n    \"Club\" : \"Udinese\",\r\n    \"BOV\" : \"71\",\r\n    \"BP\" : \"LWB\",\r\n    \"Position\" : \"LM\",\r\n    \"Player Photo\" : \"https://cdn.sofifa.com/players/000/002/16_120.png\",\r\n    \"Club Logo\" : \"https://cdn.sofifa.com/teams/55/light_60.png\",\r\n    \"Flag Photo\" : \"https://cdn.sofifa.com/flags/it.png\",\r\n    \"POT\" : \"69\",\r\n    \"Team & Contract\" : \"Udinese 2008 ~ 2016\",\r\n    \"Height\" : \"6'0\\\"\",\r\n    \"Weight\" : \"181lbs\",\r\n    \"foot\" : \"Left\",\r\n    \"Growth\" : \"0\",\r\n    \"Joined\" : \"Jul 1, 2008\",\r\n    \"Loan Date End\" : null,\r\n    \"Value\" : \"€625K\",\r\n    \"Wage\" : \"€7K\",\r\n    \"Release Clause\" : \"€0\",\r\n    \"Contract\" : \"2008 ~ 2016\",\r\n    \"Attacking\" : \"313\",\r\n    \"Crossing\" : \"75\",\r\n    \"Finishing\" : \"50\",\r\n    \"Heading Accuracy\" : \"59\",\r\n    \"Short Passing\" : \"71\",\r\n    \"Volleys\" : \"58.0\",\r\n    \"Skill\" : \"338\",\r\n    \"Dribbling\" : \"73\",\r\n    \"Curve\" : \"65.0\",\r\n    \"FK Accuracy\" : \"60\",\r\n    \"Long Passing\" : \"69\",\r\n    \"Ball Control\" : \"71\",\r\n    \"Movement\" : \"347\",\r\n    \"Acceleration\" : \"68\",\r\n    \"Sprint Speed\" : \"74\",\r\n    \"Agility\" : \"68.0\",\r\n    \"Reactions\" : \"69\",\r\n    \"Balance\" : \"68.0\",\r\n    \"Power\" : \"347\",\r\n    \"Shot Power\" : \"74\",\r\n    \"Jumping\" : \"68.0\",\r\n    \"Stamina\" : \"69\",\r\n    \"Strength\" : \"68\",\r\n    \"Long Shots\" : \"68\",\r\n    \"Mentality\" : \"320\",\r\n    \"Aggression\" : \"72\",\r\n    \"Interceptions\" : \"69.0\",\r\n    \"Positioning\" : \"63.0\",\r\n    \"Vision\" : \"66.0\",\r\n    \"Penalties\" : \"50\",\r\n    \"Composure\" : null,\r\n    \"Defending\" : \"208\",\r\n    \"Marking\" : \"70\",\r\n    \"Standing Tackle\" : \"69\",\r\n    \"Sliding Tackle\" : \"69.0\",\r\n    \"Goalkeeping\" : \"56\",\r\n    \"GK Diving\" : \"14\",\r\n    \"GK Handling\" : \"5\",\r\n    \"GK Kicking\" : \"15\",\r\n    \"GK Positioning\" : \"10\",\r\n    \"GK Reflexes\" : \"12\",\r\n    \"Total Stats\" : \"1929\",\r\n    \"Base Stats\" : \"408\",\r\n    \"W/F\" : \"3 ★\",\r\n    \"SM\" : \"2★\",\r\n    \"A/W\" : \"Medium\",\r\n    \"D/W\" : \"High\",\r\n    \"IR\" : \"2 ★\",\r\n    \"PAC\" : \"71\",\r\n    \"SHO\" : \"59\",\r\n    \"PAS\" : \"70\",\r\n    \"DRI\" : \"71\",\r\n    \"DEF\" : \"68\",\r\n    \"PHY\" : \"69\",\r\n    \"Hits\" : \"4\",\r\n    \"LS\" : \"65+0\",\r\n    \"ST\" : \"65+0\",\r\n    \"RS\" : \"65+0\",\r\n    \"LW\" : \"68+0\",\r\n    \"LF\" : \"67+0\",\r\n    \"CF\" : \"67+0\",\r\n    \"RF\" : \"67+0\",\r\n    \"RW\" : \"68+0\",\r\n    \"LAM\" : \"68+0\",\r\n    \"CAM\" : \"68+0\",\r\n    \"RAM\" : \"68+0\",\r\n    \"LM\" : \"69+0\",\r\n    \"LCM\" : \"69+0\",\r\n    \"CM\" : \"69+0\",\r\n    \"RCM\" : \"69+0\",\r\n    \"RM\" : \"69+0\",\r\n    \"LWB\" : \"71+-2\",\r\n    \"LDM\" : \"70+-1\",\r\n    \"CDM\" : \"70+-1\",\r\n    \"RDM\" : \"70+-1\",\r\n    \"RWB\" : \"71+-2\",\r\n    \"LB\" : \"70+-1\",\r\n    \"LCB\" : \"69+0\",\r\n    \"CB\" : \"69+0\",\r\n    \"RCB\" : \"69+0\",\r\n    \"RB\" : \"70+-1\",\r\n    \"GK\" : \"17+0\",\r\n    \"Gender\" : \"Male\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}:3000/api/v1/player",
+					"host": [
+						"{{URL}}"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"player"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "CREATE PLAYER Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "496aada3e6ad60c7cfde92a6f1994e333e0513a91c2afd4b94f166930cf13f83b142b0eed18d15a14a72a3d25429b34a40bd9096a95b1e6d19291416c3ce1e40ece98ba5158c3a6fb9a1ad1af4b6e9f9b8830bf622a2f404b44cf43dc268b8314f9990e4a01e81a74a5bd7e5b12444f83e178d52b0861dd90567f87147abf57f035aa337b624992e5e11cb4410205de5991bbed2443dbb1e5b39f595c05a629ff6b23eb50037b261b5f0ae0d8f41cbc9e7df8d83bb468cdf973c9dcf9cce3818fb102e99c5ef92e3226eb30cfd7bfcfacf24b6c306b401b4bf76d0a5cd99094f5435fa07a1cad715ed4285e52a73bee7e8c07959d8c73316cd06afacdd0d9de71c10b600acd83e7f653b73",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ID\" : \"2\",\r\n    \"Name\" : \"G. Pasquale\",\r\n    \"Age\" : \"33\",\r\n    \"OVA\" : \"69\",\r\n    \"Nationality\" : \"Italy\",\r\n    \"Club\" : \"Udinese\",\r\n    \"BOV\" : \"71\",\r\n    \"BP\" : \"LWB\",\r\n    \"Position\" : \"LM\",\r\n    \"Player Photo\" : \"https://cdn.sofifa.com/players/000/002/16_120.png\",\r\n    \"Club Logo\" : \"https://cdn.sofifa.com/teams/55/light_60.png\",\r\n    \"Flag Photo\" : \"https://cdn.sofifa.com/flags/it.png\",\r\n    \"POT\" : \"69\",\r\n    \"Team & Contract\" : \"Udinese 2008 ~ 2016\",\r\n    \"Height\" : \"6'0\\\"\",\r\n    \"Weight\" : \"181lbs\",\r\n    \"foot\" : \"Left\",\r\n    \"Growth\" : \"0\",\r\n    \"Joined\" : \"Jul 1, 2008\",\r\n    \"Loan Date End\" : null,\r\n    \"Value\" : \"€625K\",\r\n    \"Wage\" : \"€7K\",\r\n    \"Release Clause\" : \"€0\",\r\n    \"Contract\" : \"2008 ~ 2016\",\r\n    \"Attacking\" : \"313\",\r\n    \"Crossing\" : \"75\",\r\n    \"Finishing\" : \"50\",\r\n    \"Heading Accuracy\" : \"59\",\r\n    \"Short Passing\" : \"71\",\r\n    \"Volleys\" : \"58.0\",\r\n    \"Skill\" : \"338\",\r\n    \"Dribbling\" : \"73\",\r\n    \"Curve\" : \"65.0\",\r\n    \"FK Accuracy\" : \"60\",\r\n    \"Long Passing\" : \"69\",\r\n    \"Ball Control\" : \"71\",\r\n    \"Movement\" : \"347\",\r\n    \"Acceleration\" : \"68\",\r\n    \"Sprint Speed\" : \"74\",\r\n    \"Agility\" : \"68.0\",\r\n    \"Reactions\" : \"69\",\r\n    \"Balance\" : \"68.0\",\r\n    \"Power\" : \"347\",\r\n    \"Shot Power\" : \"74\",\r\n    \"Jumping\" : \"68.0\",\r\n    \"Stamina\" : \"69\",\r\n    \"Strength\" : \"68\",\r\n    \"Long Shots\" : \"68\",\r\n    \"Mentality\" : \"320\",\r\n    \"Aggression\" : \"72\",\r\n    \"Interceptions\" : \"69.0\",\r\n    \"Positioning\" : \"63.0\",\r\n    \"Vision\" : \"66.0\",\r\n    \"Penalties\" : \"50\",\r\n    \"Composure\" : null,\r\n    \"Defending\" : \"208\",\r\n    \"Marking\" : \"70\",\r\n    \"Standing Tackle\" : \"69\",\r\n    \"Sliding Tackle\" : \"69.0\",\r\n    \"Goalkeeping\" : \"56\",\r\n    \"GK Diving\" : \"14\",\r\n    \"GK Handling\" : \"5\",\r\n    \"GK Kicking\" : \"15\",\r\n    \"GK Positioning\" : \"10\",\r\n    \"GK Reflexes\" : \"12\",\r\n    \"Total Stats\" : \"1929\",\r\n    \"Base Stats\" : \"408\",\r\n    \"W/F\" : \"3 ★\",\r\n    \"SM\" : \"2★\",\r\n    \"A/W\" : \"Medium\",\r\n    \"D/W\" : \"High\",\r\n    \"IR\" : \"2 ★\",\r\n    \"PAC\" : \"71\",\r\n    \"SHO\" : \"59\",\r\n    \"PAS\" : \"70\",\r\n    \"DRI\" : \"71\",\r\n    \"DEF\" : \"68\",\r\n    \"PHY\" : \"69\",\r\n    \"Hits\" : \"4\",\r\n    \"LS\" : \"65+0\",\r\n    \"ST\" : \"65+0\",\r\n    \"RS\" : \"65+0\",\r\n    \"LW\" : \"68+0\",\r\n    \"LF\" : \"67+0\",\r\n    \"CF\" : \"67+0\",\r\n    \"RF\" : \"67+0\",\r\n    \"RW\" : \"68+0\",\r\n    \"LAM\" : \"68+0\",\r\n    \"CAM\" : \"68+0\",\r\n    \"RAM\" : \"68+0\",\r\n    \"LM\" : \"69+0\",\r\n    \"LCM\" : \"69+0\",\r\n    \"CM\" : \"69+0\",\r\n    \"RCM\" : \"69+0\",\r\n    \"RM\" : \"69+0\",\r\n    \"LWB\" : \"71+-2\",\r\n    \"LDM\" : \"70+-1\",\r\n    \"CDM\" : \"70+-1\",\r\n    \"RDM\" : \"70+-1\",\r\n    \"RWB\" : \"71+-2\",\r\n    \"LB\" : \"70+-1\",\r\n    \"LCB\" : \"69+0\",\r\n    \"CB\" : \"69+0\",\r\n    \"RCB\" : \"69+0\",\r\n    \"RB\" : \"70+-1\",\r\n    \"GK\" : \"17+0\",\r\n    \"Gender\" : \"Male\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}:3000/api/v1/player",
+							"host": [
+								"{{URL}}"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"player"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "x-access-token, Origin, Content-Type, Accept"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "707"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2c3-89lI3P+D4jPs79ylT3i7cGdNRvk\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 12 Apr 2021 10:49:33 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"message\": \"Player succesfully created\",\n    \"data\": {\n        \"updated_at\": \"2021-04-12T10:48:28.347Z\",\n        \"_id\": \"607425ba7f3d275d7cadf880\",\n        \"ID\": \"9807\",\n        \"Name\": \"G. Pasquale\",\n        \"Age\": \"33\",\n        \"OVA\": \"69\",\n        \"Nationality\": \"Italy\",\n        \"Club\": \"Udinese\",\n        \"BOV\": \"71\",\n        \"BP\": \"LWB\",\n        \"Position\": \"LM\",\n        \"Player Photo\": \"https://cdn.sofifa.com/players/000/002/16_120.png\",\n        \"Club Logo\": \"https://cdn.sofifa.com/teams/55/light_60.png\",\n        \"Flag Photo\": \"https://cdn.sofifa.com/flags/it.png\",\n        \"POT\": \"69\",\n        \"Team & Contract\": \"Udinese 2008 ~ 2016\",\n        \"Height\": \"6'0\\\"\",\n        \"Weight\": \"181lbs\",\n        \"foot\": \"Left\",\n        \"Growth\": \"0\",\n        \"Joined\": \"Jul 1, 2008\",\n        \"Loan Date End\": null,\n        \"Value\": \"€625K\",\n        \"Wage\": \"€7K\",\n        \"Release Clause\": \"€0\",\n        \"Contract\": \"2008 ~ 2016\",\n        \"Gender\": \"Male\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "UPDATE PLAYER",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNTcxOTM1Yzk5N2Q0MzgzMGEwM2Q2NSIsImlhdCI6MTYxNzM0MDQzMiwiZXhwIjoxNjE3NDI2ODMyfQ.m0SXR95vUpweurObIZqWDiWGnYvvEo7oGw6wd1JmxYU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ID\" : \"16\",\r\n    \"Name\" : \"G. Pasquale\",\r\n    \"Age\" : \"33\",\r\n    \"OVA\" : \"69\",\r\n    \"Nationality\" : \"Italy\",\r\n    \"Club\" : \"Udinese\",\r\n    \"BOV\" : \"71\",\r\n    \"BP\" : \"LWB\",\r\n    \"Position\" : \"LM\",\r\n    \"Player Photo\" : \"https://cdn.sofifa.com/players/000/002/16_120.png\",\r\n    \"Club Logo\" : \"https://cdn.sofifa.com/teams/55/light_60.png\",\r\n    \"Flag Photo\" : \"https://cdn.sofifa.com/flags/it.png\",\r\n    \"POT\" : \"69\",\r\n    \"Team & Contract\" : \"Udinese 2008 ~ 2016\",\r\n    \"Height\" : \"6'0\\\"\",\r\n    \"Weight\" : \"181lbs\",\r\n    \"foot\" : \"Left\",\r\n    \"Growth\" : \"0\",\r\n    \"Joined\" : \"Jul 1, 2008\",\r\n    \"Loan Date End\" : null,\r\n    \"Value\" : \"€625K\",\r\n    \"Wage\" : \"€7K\",\r\n    \"Release Clause\" : \"€0\",\r\n    \"Contract\" : \"2008 ~ 2016\",\r\n    \"Attacking\" : \"313\",\r\n    \"Crossing\" : \"75\",\r\n    \"Finishing\" : \"50\",\r\n    \"Heading Accuracy\" : \"59\",\r\n    \"Short Passing\" : \"71\",\r\n    \"Volleys\" : \"58.0\",\r\n    \"Skill\" : \"338\",\r\n    \"Dribbling\" : \"73\",\r\n    \"Curve\" : \"65.0\",\r\n    \"FK Accuracy\" : \"60\",\r\n    \"Long Passing\" : \"69\",\r\n    \"Ball Control\" : \"71\",\r\n    \"Movement\" : \"347\",\r\n    \"Acceleration\" : \"68\",\r\n    \"Sprint Speed\" : \"74\",\r\n    \"Agility\" : \"68.0\",\r\n    \"Reactions\" : \"69\",\r\n    \"Balance\" : \"68.0\",\r\n    \"Power\" : \"347\",\r\n    \"Shot Power\" : \"74\",\r\n    \"Jumping\" : \"68.0\",\r\n    \"Stamina\" : \"69\",\r\n    \"Strength\" : \"68\",\r\n    \"Long Shots\" : \"68\",\r\n    \"Mentality\" : \"320\",\r\n    \"Aggression\" : \"72\",\r\n    \"Interceptions\" : \"69.0\",\r\n    \"Positioning\" : \"63.0\",\r\n    \"Vision\" : \"66.0\",\r\n    \"Penalties\" : \"50\",\r\n    \"Composure\" : null,\r\n    \"Defending\" : \"208\",\r\n    \"Marking\" : \"70\",\r\n    \"Standing Tackle\" : \"69\",\r\n    \"Sliding Tackle\" : \"69.0\",\r\n    \"Goalkeeping\" : \"56\",\r\n    \"GK Diving\" : \"14\",\r\n    \"GK Handling\" : \"5\",\r\n    \"GK Kicking\" : \"15\",\r\n    \"GK Positioning\" : \"10\",\r\n    \"GK Reflexes\" : \"12\",\r\n    \"Total Stats\" : \"1929\",\r\n    \"Base Stats\" : \"408\",\r\n    \"W/F\" : \"3 ★\",\r\n    \"SM\" : \"2★\",\r\n    \"A/W\" : \"Medium\",\r\n    \"D/W\" : \"High\",\r\n    \"IR\" : \"2 ★\",\r\n    \"PAC\" : \"71\",\r\n    \"SHO\" : \"59\",\r\n    \"PAS\" : \"70\",\r\n    \"DRI\" : \"71\",\r\n    \"DEF\" : \"68\",\r\n    \"PHY\" : \"69\",\r\n    \"Hits\" : \"4\",\r\n    \"LS\" : \"65+0\",\r\n    \"ST\" : \"65+0\",\r\n    \"RS\" : \"65+0\",\r\n    \"LW\" : \"68+0\",\r\n    \"LF\" : \"67+0\",\r\n    \"CF\" : \"67+0\",\r\n    \"RF\" : \"67+0\",\r\n    \"RW\" : \"68+0\",\r\n    \"LAM\" : \"68+0\",\r\n    \"CAM\" : \"68+0\",\r\n    \"RAM\" : \"68+0\",\r\n    \"LM\" : \"69+0\",\r\n    \"LCM\" : \"69+0\",\r\n    \"CM\" : \"69+0\",\r\n    \"RCM\" : \"69+0\",\r\n    \"RM\" : \"69+0\",\r\n    \"LWB\" : \"71+-2\",\r\n    \"LDM\" : \"70+-1\",\r\n    \"CDM\" : \"70+-1\",\r\n    \"RDM\" : \"70+-1\",\r\n    \"RWB\" : \"71+-2\",\r\n    \"LB\" : \"70+-1\",\r\n    \"LCB\" : \"69+0\",\r\n    \"CB\" : \"69+0\",\r\n    \"RCB\" : \"69+0\",\r\n    \"RB\" : \"70+-1\",\r\n    \"GK\" : \"17+0\",\r\n    \"Gender\" : \"Male\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}:3000/api/v1/player/16",
+					"host": [
+						"{{URL}}"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"player",
+						"16"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "UPDATE PLAYER Success",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "496aada3e6ad60c7cfde92a6f1994e333e0513a91c2afd4b94f166930cf13f83b142b0eed18d15a14a72a3d25429b34a40bd9096a95b1e6d19291416c3ce1e40ece98ba5158c3a6fb9a1ad1af4b6e9f9b8830bf622a2f404b44cf43dc268b8314f9990e4a01e81a74a5bd7e5b12444f83e178d52b0861dd90567f87147abf57f035aa337b624992e5e11cb4410205de5991bbed2443dbb1e5b39f595c05a629ff6b23eb50037b261b5f0ae0d8f41cbc9e7df8d83bb468cdf973c9dcf9cce3818fb102e99c5ef92e3226eb30cfd7bfcfacf24b6c306b401b4bf76d0a5cd99094f5435fa07a1cad715ed4285e52a73bee7e8c07959d8c73316cd06afacdd0d9de71c10b600acd83e7f653b73",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ID\" : \"16\",\r\n    \"Name\" : \"G. Pasquale\",\r\n    \"Age\" : \"33\",\r\n    \"OVA\" : \"69\",\r\n    \"Nationality\" : \"Italy\",\r\n    \"Club\" : \"Udinese\",\r\n    \"BOV\" : \"71\",\r\n    \"BP\" : \"LWB\",\r\n    \"Position\" : \"LM\",\r\n    \"Player Photo\" : \"https://cdn.sofifa.com/players/000/002/16_120.png\",\r\n    \"Club Logo\" : \"https://cdn.sofifa.com/teams/55/light_60.png\",\r\n    \"Flag Photo\" : \"https://cdn.sofifa.com/flags/it.png\",\r\n    \"POT\" : \"69\",\r\n    \"Team & Contract\" : \"Udinese 2008 ~ 2016\",\r\n    \"Height\" : \"6'0\\\"\",\r\n    \"Weight\" : \"181lbs\",\r\n    \"foot\" : \"Left\",\r\n    \"Growth\" : \"0\",\r\n    \"Joined\" : \"Jul 1, 2008\",\r\n    \"Loan Date End\" : null,\r\n    \"Value\" : \"€625K\",\r\n    \"Wage\" : \"€7K\",\r\n    \"Release Clause\" : \"€0\",\r\n    \"Contract\" : \"2008 ~ 2016\",\r\n    \"Attacking\" : \"313\",\r\n    \"Crossing\" : \"75\",\r\n    \"Finishing\" : \"50\",\r\n    \"Heading Accuracy\" : \"59\",\r\n    \"Short Passing\" : \"71\",\r\n    \"Volleys\" : \"58.0\",\r\n    \"Skill\" : \"338\",\r\n    \"Dribbling\" : \"73\",\r\n    \"Curve\" : \"65.0\",\r\n    \"FK Accuracy\" : \"60\",\r\n    \"Long Passing\" : \"69\",\r\n    \"Ball Control\" : \"71\",\r\n    \"Movement\" : \"347\",\r\n    \"Acceleration\" : \"68\",\r\n    \"Sprint Speed\" : \"74\",\r\n    \"Agility\" : \"68.0\",\r\n    \"Reactions\" : \"69\",\r\n    \"Balance\" : \"68.0\",\r\n    \"Power\" : \"347\",\r\n    \"Shot Power\" : \"74\",\r\n    \"Jumping\" : \"68.0\",\r\n    \"Stamina\" : \"69\",\r\n    \"Strength\" : \"68\",\r\n    \"Long Shots\" : \"68\",\r\n    \"Mentality\" : \"320\",\r\n    \"Aggression\" : \"72\",\r\n    \"Interceptions\" : \"69.0\",\r\n    \"Positioning\" : \"63.0\",\r\n    \"Vision\" : \"66.0\",\r\n    \"Penalties\" : \"50\",\r\n    \"Composure\" : null,\r\n    \"Defending\" : \"208\",\r\n    \"Marking\" : \"70\",\r\n    \"Standing Tackle\" : \"69\",\r\n    \"Sliding Tackle\" : \"69.0\",\r\n    \"Goalkeeping\" : \"56\",\r\n    \"GK Diving\" : \"14\",\r\n    \"GK Handling\" : \"5\",\r\n    \"GK Kicking\" : \"15\",\r\n    \"GK Positioning\" : \"10\",\r\n    \"GK Reflexes\" : \"12\",\r\n    \"Total Stats\" : \"1929\",\r\n    \"Base Stats\" : \"408\",\r\n    \"W/F\" : \"3 ★\",\r\n    \"SM\" : \"2★\",\r\n    \"A/W\" : \"Medium\",\r\n    \"D/W\" : \"High\",\r\n    \"IR\" : \"2 ★\",\r\n    \"PAC\" : \"71\",\r\n    \"SHO\" : \"59\",\r\n    \"PAS\" : \"70\",\r\n    \"DRI\" : \"71\",\r\n    \"DEF\" : \"68\",\r\n    \"PHY\" : \"69\",\r\n    \"Hits\" : \"4\",\r\n    \"LS\" : \"65+0\",\r\n    \"ST\" : \"65+0\",\r\n    \"RS\" : \"65+0\",\r\n    \"LW\" : \"68+0\",\r\n    \"LF\" : \"67+0\",\r\n    \"CF\" : \"67+0\",\r\n    \"RF\" : \"67+0\",\r\n    \"RW\" : \"68+0\",\r\n    \"LAM\" : \"68+0\",\r\n    \"CAM\" : \"68+0\",\r\n    \"RAM\" : \"68+0\",\r\n    \"LM\" : \"69+0\",\r\n    \"LCM\" : \"69+0\",\r\n    \"CM\" : \"69+0\",\r\n    \"RCM\" : \"69+0\",\r\n    \"RM\" : \"69+0\",\r\n    \"LWB\" : \"71+-2\",\r\n    \"LDM\" : \"70+-1\",\r\n    \"CDM\" : \"70+-1\",\r\n    \"RDM\" : \"70+-1\",\r\n    \"RWB\" : \"71+-2\",\r\n    \"LB\" : \"70+-1\",\r\n    \"LCB\" : \"69+0\",\r\n    \"CB\" : \"69+0\",\r\n    \"RCB\" : \"69+0\",\r\n    \"RB\" : \"70+-1\",\r\n    \"GK\" : \"17+0\",\r\n    \"Gender\" : \"Male\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}:3000/api/v1/player/16",
+							"host": [
+								"{{URL}}"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"player",
+								"16"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "x-access-token, Origin, Content-Type, Accept"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1973"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"7b5-4Gqy1AkeHnWi/rc4XkUhTmxoihE\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 12 Apr 2021 10:50:20 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"message\": \"Player was updated successfully\",\n    \"data\": {\n        \"updated_at\": \"2021-04-12T10:48:28.347Z\",\n        \"_id\": \"6052cc4189999e12d56a4770\",\n        \"ID\": \"16\",\n        \"Name\": \"G. Pasquale\",\n        \"Age\": \"33\",\n        \"OVA\": \"69\",\n        \"Nationality\": \"Italy\",\n        \"Club\": \"Udinese\",\n        \"BOV\": \"71\",\n        \"BP\": \"LWB\",\n        \"Position\": \"LM\",\n        \"Player Photo\": \"https://cdn.sofifa.com/players/000/002/16_120.png\",\n        \"Club Logo\": \"https://cdn.sofifa.com/teams/55/light_60.png\",\n        \"Flag Photo\": \"https://cdn.sofifa.com/flags/it.png\",\n        \"POT\": \"69\",\n        \"Team & Contract\": \"Udinese 2008 ~ 2016\",\n        \"Height\": \"6'0\\\"\",\n        \"Weight\": \"181lbs\",\n        \"foot\": \"Left\",\n        \"Growth\": \"0\",\n        \"Joined\": \"Jul 1, 2008\",\n        \"Loan Date End\": null,\n        \"Value\": \"€625K\",\n        \"Wage\": \"€7K\",\n        \"Release Clause\": \"€0\",\n        \"Contract\": \"2008 ~ 2016\",\n        \"Attacking\": \"337\",\n        \"Crossing\": \"68\",\n        \"Finishing\": \"64\",\n        \"Heading Accuracy\": \"61\",\n        \"Short Passing\": \"76\",\n        \"Volleys\": \"68.0\",\n        \"Skill\": \"369\",\n        \"Dribbling\": \"69\",\n        \"Curve\": \"79.0\",\n        \"FK Accuracy\": \"79\",\n        \"Long Passing\": \"71\",\n        \"Ball Control\": \"71\",\n        \"Movement\": \"305\",\n        \"Acceleration\": \"56\",\n        \"Sprint Speed\": \"50\",\n        \"Agility\": \"62.0\",\n        \"Reactions\": \"65\",\n        \"Balance\": \"72.0\",\n        \"Power\": \"324\",\n        \"Shot Power\": \"75\",\n        \"Jumping\": \"54.0\",\n        \"Stamina\": \"64\",\n        \"Strength\": \"60\",\n        \"Long Shots\": \"71\",\n        \"Mentality\": \"362\",\n        \"Aggression\": \"71\",\n        \"Interceptions\": \"71.0\",\n        \"Positioning\": \"72.0\",\n        \"Vision\": \"73.0\",\n        \"Penalties\": \"75\",\n        \"Composure\": \"79.0\",\n        \"Defending\": \"153\",\n        \"Marking\": \"70\",\n        \"Standing Tackle\": \"43\",\n        \"Sliding Tackle\": \"40.0\",\n        \"Goalkeeping\": \"56\",\n        \"GK Diving\": \"9\",\n        \"GK Handling\": \"12\",\n        \"GK Kicking\": \"13\",\n        \"GK Positioning\": \"11\",\n        \"GK Reflexes\": \"11\",\n        \"Total Stats\": \"1906\",\n        \"Base Stats\": \"385\",\n        \"W/F\": \"4 ★\",\n        \"SM\": \"3★\",\n        \"A/W\": \"Medium\",\n        \"D/W\": \"Medium\",\n        \"IR\": \"1 ★\",\n        \"PAC\": \"53\",\n        \"SHO\": \"69\",\n        \"PAS\": \"73\",\n        \"DRI\": \"69\",\n        \"DEF\": \"58\",\n        \"PHY\": \"63\",\n        \"Hits\": \"4\",\n        \"LS\": \"67+1\",\n        \"ST\": \"67+1\",\n        \"RS\": \"67+1\",\n        \"LW\": \"67+0\",\n        \"LF\": \"68+0\",\n        \"CF\": \"68+0\",\n        \"RF\": \"68+0\",\n        \"RW\": \"67+0\",\n        \"LAM\": \"70+1\",\n        \"CAM\": \"70+1\",\n        \"RAM\": \"70+1\",\n        \"LM\": \"68+1\",\n        \"LCM\": \"70+1\",\n        \"CM\": \"70+1\",\n        \"RCM\": \"70+1\",\n        \"RM\": \"68+1\",\n        \"LWB\": \"62+1\",\n        \"LDM\": \"66+1\",\n        \"CDM\": \"66+1\",\n        \"RDM\": \"66+1\",\n        \"RWB\": \"62+1\",\n        \"LB\": \"60+1\",\n        \"LCB\": \"60+1\",\n        \"CB\": \"60+1\",\n        \"RCB\": \"60+1\",\n        \"RB\": \"60+1\",\n        \"GK\": \"17+1\",\n        \"Gender\": \"Male\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "DELETE PLAYER",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-access-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNTcxOTM1Yzk5N2Q0MzgzMGEwM2Q2NSIsImlhdCI6MTYxNjMyMDgzOSwiZXhwIjoxNjE2NDA3MjM5fQ.vd8Meqkw4AUg9EqYcmrWaNgSnmCIcifaX_ZEWXSVuR8"
+					}
+				],
+				"url": {
+					"raw": "52.170.214.236:3000/api/v1/player/2",
+					"host": [
+						"52",
+						"170",
+						"214",
+						"236"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"player",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "DELETE PLAYER Success",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "496aada3e6ad60c7cfde92a6f1994e333e0513a91c2afd4b94f166930cf13f83b142b0eed18d15a14a72a3d25429b34a40bd9096a95b1e6d19291416c3ce1e40ece98ba5158c3a6fb9a1ad1af4b6e9f9b8830bf622a2f404b44cf43dc268b8314f9990e4a01e81a74a5bd7e5b12444f83e178d52b0861dd90567f87147abf57f035aa337b624992e5e11cb4410205de5991bbed2443dbb1e5b39f595c05a629ff6b23eb50037b261b5f0ae0d8f41cbc9e7df8d83bb468cdf973c9dcf9cce3818fb102e99c5ef92e3226eb30cfd7bfcfacf24b6c306b401b4bf76d0a5cd99094f5435fa07a1cad715ed4285e52a73bee7e8c07959d8c73316cd06afacdd0d9de71c10b600acd83e7f653b73"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}:3000/api/v1/player/16",
+							"host": [
+								"{{URL}}"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"player",
+								"16"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "x-access-token, Origin, Content-Type, Accept"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "70"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"46-V0kYN6ETVWFW2qQqFhEqu3cjKjc\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 12 Apr 2021 10:50:51 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"message\": \"Player was deleted successfully\",\n    \"data\": null\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "d91ae780-9a08-4235-9320-1e6d8208ef1a",
+			"key": "URL",
+			"value": "52.170.214.236"
+		}
+	]
+}

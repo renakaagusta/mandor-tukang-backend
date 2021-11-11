@@ -49,19 +49,7 @@ require("./app/routes/midtrans.routes")(app);
 require("./app/routes/notification.routes")(app);
 
 const PORT = process.env.PORT || 3000;
-if (process.pid) {
-  console.log('This process is your pid ' + process.pid);
-}
+
 app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}.`);
-
-
-      /*process.once('SIGUSR2', function () {
-        process.kill(process.pid, 'SIGUSR2');
-      });
-      
-      process.on('SIGINT', function () {
-        // this is only called on ctrl+c, not restart
-        process.kill(process.pid, 'SIGINT');
-      });*/
-});
+    console.log(`Server is running on port ${PORT}.`);})
+    

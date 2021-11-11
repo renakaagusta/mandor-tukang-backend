@@ -28,7 +28,7 @@ var id = "";
 
 var storage = multer.diskStorage({
     destination: function (req, file, callback) {
-        callback(null, './../img/users');
+        callback(null, './../public/img/users');
     },
     filename: function (req, file, callback) {
         console.log(file.originalname);

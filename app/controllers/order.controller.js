@@ -33,7 +33,7 @@ const {
 
 var storage = multer.diskStorage({
     destination: function (req, file, callback) {
-        callback(null, './../img/orders');
+        callback(null, './../public/img/orders');
     },
     filename: function (req, file, callback) {
         console.log(file.originalname);
